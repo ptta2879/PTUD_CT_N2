@@ -10,8 +10,6 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="fontawesome/css/fontawesome.min.css"> -->
 
-  
-
   <style type="text/css">
 
   /*.bd-placeholder-img {
