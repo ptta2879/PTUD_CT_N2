@@ -1,22 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Vui ve khong quao</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Vui ve khong quao</title>
 
-  
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/all.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  
 
+<link rel="stylesheet" type="text/css" href="views/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="views/assets/css/all.css">
+<link rel="stylesheet" type="text/css" href="views/assets/css/style.css">
 </head>
 
 <body>
 
-
-  <header>
+ <header>
     <!-- <div class="container-fluid"> -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">

@@ -1,8 +1,6 @@
 <?php
   include_once 'header.php';
-
 ?>
-
 
 <section class="sessionrieng">
   <div class="container shadow-sm p-1 mb-3 mt-3 bg-white rounded">
@@ -60,7 +58,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-4 border-right">    
+    <div class="col-lg-4 col-md-6 border-right">    
       <div class="row">
         <div class="col-6">
 
@@ -74,32 +72,34 @@
       </div>
     </div>
 
-    <div class="col-4 border-right">    
+    <div class="col-lg-4 col-md-6 border-right">    
       <div class="row">
         <div class="col-6">
-          <img src="http://placehold.it/180x140" class="img-fluid rounded" alt="">
+
+          <img src="http://placehold.it/180x140" class="figure-img img-fluid rounded" alt="">
         </div>
         <div class="col-6 p-0">
           <p class="mb-0">Day la chu ne nha</p>
           <p>Gia ne</p>
           <p class="small text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>  
-        </div>     
+        </div>   
       </div>
     </div>
 
-  <div class="col-4 ">    
-       <div class="row">
-         <div class="col-6">
-           <img src="http://placehold.it/180x140" class="figure-img img-fluid rounded" alt="">
-         </div>
-         <div class="col-6 p-0">
-           <p class="mb-0">Day la chu ne nha</p>
-           <p>Gia ne</p>
-           <p class="small text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>  
-         </div>     
-       </div>
-     </div>
-  </div>
+    <div class="col-lg-4 col-md-6">    
+      <div class="row">
+        <div class="col-6">
+
+          <img src="http://placehold.it/180x140" class="figure-img img-fluid rounded" alt="">
+        </div>
+        <div class="col-6 p-0">
+          <p class="mb-0">Day la chu ne nha</p>
+          <p>Gia ne</p>
+          <p class="small text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>  
+        </div>   
+      </div>
+    </div>
+</div>
 </div>
 
 
@@ -110,45 +110,48 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-4 border-right">    
+    <div class="col-lg-4 col-md-6 border-right">    
       <div class="row">
         <div class="col-6">
+
           <img src="http://placehold.it/180x140" class="figure-img img-fluid rounded" alt="">
         </div>
         <div class="col-6 p-0">
           <p class="mb-0">Day la chu ne nha</p>
           <p>Gia ne</p>
           <p class="small text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>  
-        </div>     
+        </div>   
       </div>
     </div>
 
-    <div class="col-4 border-right">    
+    <div class="col-lg-4 col-md-6 border-right">    
       <div class="row">
         <div class="col-6">
-          <img src="http://placehold.it/180x140" class="img-fluid rounded" alt="">
+
+          <img src="http://placehold.it/180x140" class="figure-img img-fluid rounded" alt="">
         </div>
         <div class="col-6 p-0">
           <p class="mb-0">Day la chu ne nha</p>
           <p>Gia ne</p>
           <p class="small text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>  
-        </div>     
+        </div>   
       </div>
     </div>
 
-  <div class="col-4 ">    
-       <div class="row">
-         <div class="col-6">
-           <img src="http://placehold.it/180x140" class="figure-img img-fluid rounded" alt="">
-         </div>
-         <div class="col-6 p-0">
-           <p class="mb-0">Day la chu ne nha</p>
-           <p>Gia ne</p>
-           <p class="small text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>  
-         </div>     
-       </div>
-     </div>
-  </div>
+    <div class="col-lg-4 col-md-6">    
+      <div class="row">
+        <div class="col-6">
+
+          <img src="http://placehold.it/180x140" class="figure-img img-fluid rounded" alt="">
+        </div>
+        <div class="col-6 p-0">
+          <p class="mb-0">Day la chu ne nha</p>
+          <p>Gia ne</p>
+          <p class="small text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>  
+        </div>   
+      </div>
+    </div>
+</div>
 </div>
 
 
@@ -174,7 +177,7 @@
 </section>
 
   <div class="row">
-    <div class="col-3">
+    <div class="col-lg-3 col-md-6">
       <a href="#">
        <figure class="figure">
         <img src="http://placehold.it/285x300" class="figure-img img-fluid" alt="Figure image">
@@ -187,7 +190,7 @@
       </a>
     </div>
 
-    <div class="col-3">
+    <div class="col-lg-3 col-md-6">
       <a href="#">
        <figure class="figure">
         <img src="http://placehold.it/285x300" class="figure-img img-fluid" alt="Figure image">
@@ -200,7 +203,39 @@
       </a>
     </div>
 
-    <div class="col-3">
+    <div class="col-lg-3 col-md-6">
+      <a href="#">
+       <figure class="figure">
+        <img src="http://placehold.it/285x300" class="figure-img img-fluid" alt="Figure image">
+        <figcaption class="figure-caption">
+          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
+          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
+        </figcaption>
+      </figure>
+      </a>
+    </div>
+    
+    
+    
+
+    <div class="col-lg-3 col-md-6">
+      <a href="#">
+       <figure class="figure">
+        <img src="http://placehold.it/285x300" class="figure-img img-fluid" alt="Figure image">
+        <figcaption class="figure-caption">
+          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
+          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
+        </figcaption>
+      </figure>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-lg-3 col-md-6">
       <a href="#">
        <figure class="figure">
         <img src="http://placehold.it/285x300" class="figure-img img-fluid" alt="Figure image">
@@ -213,7 +248,33 @@
       </a>
     </div>
 
-    <div class="col-3">
+    <div class="col-lg-3 col-md-6">
+      <a href="#">
+       <figure class="figure">
+        <img src="http://placehold.it/285x300" class="figure-img img-fluid" alt="Figure image">
+        <figcaption class="figure-caption">
+          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
+          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
+        </figcaption>
+      </figure>
+      </a>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
+      <a href="#">
+       <figure class="figure">
+        <img src="http://placehold.it/285x300" class="figure-img img-fluid" alt="Figure image">
+        <figcaption class="figure-caption">
+          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
+          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
+        </figcaption>
+      </figure>
+      </a>
+    </div>
+
+    <div class="col-lg-3 col-md-6">
       <a href="#">
        <figure class="figure">
         <img src="http://placehold.it/285x300" class="figure-img img-fluid" alt="Figure image">
@@ -229,7 +290,7 @@
 
 
   <div class="row">
-    <div class="col-3">
+    <div class="col-lg-3 col-md-6">
       <a href="#">
        <figure class="figure">
         <img src="http://placehold.it/285x300" class="figure-img img-fluid" alt="Figure image">
@@ -242,7 +303,7 @@
       </a>
     </div>
 
-    <div class="col-3">
+    <div class="col-lg-3 col-md-6">
       <a href="#">
        <figure class="figure">
         <img src="http://placehold.it/285x300" class="figure-img img-fluid" alt="Figure image">
@@ -255,7 +316,7 @@
       </a>
     </div>
 
-    <div class="col-3">
+    <div class="col-lg-3 col-md-6">
       <a href="#">
        <figure class="figure">
         <img src="http://placehold.it/285x300" class="figure-img img-fluid" alt="Figure image">
@@ -268,62 +329,7 @@
       </a>
     </div>
 
-    <div class="col-3">
-      <a href="#">
-       <figure class="figure">
-        <img src="http://placehold.it/285x300" class="figure-img img-fluid" alt="Figure image">
-        <figcaption class="figure-caption">
-          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
-          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
-        </figcaption>
-      </figure>
-      </a>
-    </div>
-  </div>
-
-
-  <div class="row">
-    <div class="col-3">
-      <a href="#">
-       <figure class="figure">
-        <img src="http://placehold.it/285x300" class="figure-img img-fluid" alt="Figure image">
-        <figcaption class="figure-caption">
-          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
-          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
-        </figcaption>
-      </figure>
-      </a>
-    </div>
-
-    <div class="col-3">
-      <a href="#">
-       <figure class="figure">
-        <img src="http://placehold.it/285x300" class="figure-img img-fluid" alt="Figure image">
-        <figcaption class="figure-caption">
-          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
-          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
-        </figcaption>
-      </figure>
-      </a>
-    </div>
-
-    <div class="col-3">
-      <a href="#">
-       <figure class="figure">
-        <img src="http://placehold.it/285x300" class="figure-img img-fluid" alt="Figure image">
-        <figcaption class="figure-caption">
-          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
-          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
-        </figcaption>
-      </figure>
-      </a>
-    </div>
-
-    <div class="col-3">
+    <div class="col-lg-3 col-md-6">
       <a href="#">
        <figure class="figure">
         <img src="http://placehold.it/285x300" class="figure-img img-fluid" alt="Figure image">
@@ -365,3 +371,4 @@
   include_once 'footer.php';
   
 ?>
+
