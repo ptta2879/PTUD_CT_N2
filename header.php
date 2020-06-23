@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Vui ve khong quao</title>
+<title>FAST AND CONVENIENT</title>
 
 
 <link rel="stylesheet" type="text/css" href="views/assets/css/bootstrap.min.css">
@@ -24,9 +24,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a href="index.php" class="nav-link">Trang chủ</a>
-              </li>
+              
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Danh mục

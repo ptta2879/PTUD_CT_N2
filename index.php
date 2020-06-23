@@ -16,7 +16,7 @@
       <img src="http://placehold.it/1000x400" class="d-block w-100 rounded" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        
       </div>
     </div>
     <div class="carousel-item">
@@ -30,7 +30,7 @@
       <img src="http://placehold.it/1000x400" class="d-block w-100 rounded" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>Third slide label</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        
       </div>
     </div>
   </div>
@@ -103,7 +103,7 @@
 </div>
 
 
-<div class="container shadow=sm p-3 mb-5 mt-5 bg-white rounded">
+<div class="container shadow-sm p-3 mb-5 mt-5 bg-white rounded">
   <div class="row">
     <div class="col-12">
       <h1 class="h4 text-dark text-center mb-4">SẢN PHẨM BÁN CHẠY</h1>
@@ -161,18 +161,17 @@
   <section>
   <div class="row">
     <div class="col-lg-8 col-sm-12">
-      <span class="badge badge-secondary badge_cs">Giá từ thấp đến cao</span>
-      <span class="badge badge-secondary badge_cs">Giá từ cao đến thấp</span>
-      <span class="badge badge-secondary badge_cs">Bán chạy nhất</span>
-      <span class="badge badge-secondary badge_cs">Mới nhất</span>
-      <span class="badge badge-secondary badge_cs">Dark</span>
+      <a href="#" class="badge badge-secondary badge_cs">Giá từ thấp đến cao</a>
+      <a href="#" class="badge badge-secondary badge_cs">Giá từ cao đến thấp</a>
+      <a href="#" class="badge badge-secondary badge_cs">Theo tên từ A-Z</a>
+      <a href="#" class="badge badge-secondary badge_cs">Theo tên từ Z-A</a>
     </div>
-    <div class="input-group mb-4 col-lg-4 col-sm-12 ml-auto">
-      <input type="text" class="form-control change-boxshadow" placeholder="Search text here" aria-label="Text input with button">
+    <form class="input-group mb-4 col-lg-4 col-sm-12 ml-auto">
+      <input type="text" class="form-control change-boxshadow" placeholder="Tìm Kiếm" aria-label="Text input with button">
       <span class="input-group-append">
          <button type="button" class="btn btn-sm btn-secondary border-secondary">Search</button>
       </span>
-    </div>
+    </form>
   </div>
 </section>
 
