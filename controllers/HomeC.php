@@ -1,6 +1,12 @@
 <?php
-class home{
-
+include('models/databaseKH.php');
+include('views/homeView.php');
+class home
+{
+	function loadtoandosanpham()
+	{
+		# code...
+	}
 }
 
 ?>

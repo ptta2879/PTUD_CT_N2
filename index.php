@@ -1,5 +1,7 @@
 <?php
   include_once 'header.php';
+  include('controllers/HomeC.php');
+  $p = new home();
 ?>
 
 <section class="sessionrieng">
@@ -160,12 +162,6 @@
 <div class="container shadow-sm p-3 mb-5 bg-white rounded">
   <section>
   <div class="row">
-    <div class="col-lg-8 col-sm-12">
-      <a href="#" class="badge badge-secondary badge_cs">Giá từ thấp đến cao</a>
-      <a href="#" class="badge badge-secondary badge_cs">Giá từ cao đến thấp</a>
-      <a href="#" class="badge badge-secondary badge_cs">Theo tên từ A-Z</a>
-      <a href="#" class="badge badge-secondary badge_cs">Theo tên từ Z-A</a>
-    </div>
     <form class="input-group mb-4 col-lg-4 col-sm-12 ml-auto">
       <input type="text" class="form-control change-boxshadow" placeholder="Tìm Kiếm" aria-label="Text input with button">
       <span class="input-group-append">

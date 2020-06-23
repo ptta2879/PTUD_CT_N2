@@ -2,11 +2,11 @@
 class databasekhachhang{
 	function database()
 	{
-		$dsn="mysql:host=localhost;dbname=testpost";
+		$dsn="mysql:host=localhost;dbname=db_vuive";
 
-		$username='staff';
+		$username='vuive';
 
-		$password='123';
+		$password='123456';
 
 		$options=array(PDO::MYSQL_ATTR_INIT_COMMAND=>'SET NAMES utf8');
 
@@ -16,20 +16,20 @@ class databasekhachhang{
 
 	}
 
-	function themdulieusp($contents,$id_staff) {
+	function loaddulieu($sql)
 
-		$link=$this->database();
-		$ketqua=$link->prepare("INSERT into post(contents, id_staff) VALUES(:contents, :id_staff)");
-		$ketqua->bindParam(':contents',$contents);
-		$ketqua->bindParam(':id_staff',$id_staff);
-		$ketqua->execute();
-		// if($ketqua->execute()) {
-		// 	$id=$link->lastInsertId();
-		// 	return $id;
-		// }
-		// else {
-		// 	return 0;
-		// }
-	}
+    {
+
+        $link=$this->database();
+
+        $ketqua=$link->prepare($sql);
+
+        $ketqua->setFetchMode(PDO::FETCH_ASSOC);
+
+        $ketqua->execute();
+
+        return $ketqua->fetchAll();
+
+    }
 }
 ?>
