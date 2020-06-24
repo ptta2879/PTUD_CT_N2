@@ -5,7 +5,7 @@ class home
 {
 	function loadtoandosanpham()
 	{
-		# code...
+		
 	}
 }
 
