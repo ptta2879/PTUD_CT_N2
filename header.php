@@ -9,6 +9,8 @@
 <link rel="stylesheet" type="text/css" href="views/assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="views/assets/css/all.css">
 <link rel="stylesheet" type="text/css" href="views/assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="views/assets/css/mycss.css">
+<link REL="SHORTCUT ICON" HREF="views/assets/img/logo/FAC2.ico">
 </head>
 
 <body>
@@ -16,15 +18,19 @@
  <header>
     <!-- <div class="container-fluid"> -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-          <a href="index.php" class="navbar-brand">Small business</a>
+        <div class="container-fluid">
+          <a href="index.php" class="navbar-brand">
+            <img class="hinh" src="views/assets/img/logo/FAC2.ico">
+          </a>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-              
+              <li class="nav-item active">
+                <a href="index.php" class="nav-link">Trang Chủ</a>
+              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Danh mục

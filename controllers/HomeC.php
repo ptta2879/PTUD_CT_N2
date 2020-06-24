@@ -7,7 +7,7 @@ class home
 	{
 		$p = new databasePDO();
 		$v = new viewHome();
-		$slide=$p->loaddulieu('SELECT * FROM tintuc');
+		$slide=$p->loaddulieu('SELECT * FROM tintuc ORDER BY vitri asc');
 		$v->tintuc($slide);
 	}
 }

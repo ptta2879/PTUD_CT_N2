@@ -9,16 +9,17 @@ class viewHome
 			if($i==0)
 			{
 				echo '
-				<div class="carousel-item active">
-				<a href="#">
-     			<img src="views/assets/img/tintuc/'.$row['hinh'].'.png"  class="d-block w-100 rounded" alt="even1">
-     			</a></div>';
+				 <div class="carousel-item active">
+       		 		<a href="#">
+         			 <img src="views/assets/img/tintuc/Tintuc'.$row['id'].'.png"   height="400px" width="100%" alt="even1">
+          			</a>
+          		</div>';
 			}
 			else
 			{
 				echo '<div class="carousel-item">
       <a href="#">
-      <img src="views/assets/img/tintuc/'.$row['hinh'].'.png" class="d-block w-100 rounded" alt="even">
+      <img src="views/assets/img/tintuc/Tintuc'.$row['id'].'.png" height="400px" width="100%"  alt="even">
       </a>
     </div>';	
 			}

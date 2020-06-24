@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <title>Code with Bootstrap by PM</title>
+    <title>FAST AND CONVENIENT ADMIN</title>
 
-    <link rel="stylesheet" href="assets/css/all.css">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="views/assets/css/all.css">
+    <link href="views/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="views/assets/fontawesome/css/fontawesome.min.css">
 
     <style>
       .bd-placeholder-img {
@@ -27,7 +27,7 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="assets/css/dashboard.css" rel="stylesheet">
+    <link href="views/assets/css/dashboard.css" rel="stylesheet">
   </head>
   <body>
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
