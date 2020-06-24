@@ -1,5 +1,5 @@
 <?php
-class databasekhachhang{
+class databasePDO{
 	function database()
 	{
 		$dsn="mysql:host=localhost;dbname=db_vuive";
