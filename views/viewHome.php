@@ -11,7 +11,7 @@ class viewHome
 				echo '
 				 <div class="carousel-item active">
        		 		<a href="#">
-         			 <img src="views/assets/img/tintuc/Tintuc'.$row['id'].'.png"   height="400px" width="100%" alt="even1">
+         			 <img src="views/assets/img/tintuc/Tintuc'.$row['id'].'.png"   height="400px" width="100%" class="hinh" alt="even1">
           			</a>
           		</div>';
 			}
@@ -19,7 +19,7 @@ class viewHome
 			{
 				echo '<div class="carousel-item">
       <a href="#">
-      <img src="views/assets/img/tintuc/Tintuc'.$row['id'].'.png" height="400px" width="100%"  alt="even">
+      <img src="views/assets/img/tintuc/Tintuc'.$row['id'].'.png" height="400px" width="100%"class="hinh"  alt="even">
       </a>
     </div>';	
 			}
