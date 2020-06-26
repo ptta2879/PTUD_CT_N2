@@ -1,7 +1,7 @@
 <?php
 include('models/databaseKH.php');
 include('views/page/trangchu_v.php');
-class trangchu 
+class TrangChu 
 {
 	function banner()
 	{

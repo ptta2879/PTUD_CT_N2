@@ -1,6 +1,6 @@
 <?php 
 include ('models/databaseKH.php');
-class dangky
+class DangKy
 {
 	function dangkytk($lastname,$name,$user,$pass,$sdt,$diachi)
 	{

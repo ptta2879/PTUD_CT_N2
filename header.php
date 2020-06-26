@@ -1,3 +1,13 @@
+<?php session_start(); 
+  if(isset($_REQUEST['dangxuat']))
+  {
+    $nutdangxuat=$_REQUEST['dangxuat'];
+  }
+  else
+  {
+    $nutdangxuat='';
+  }
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -51,9 +61,31 @@
               </li>
             </ul>
 
-
-            <a class="btn btn-sm btn-outline-secondary mr-2" href="signUp.php"><i class="far fa-user mr-2"></i>Đăng Ký</a>
-            <a class="btn btn-sm btn-outline-secondary mr-2" href="signIn.php"><i class="fas fa-user mr-2"></i>Đăng Nhập</a>
+            <?php 
+              if (isset($_SESSION['username'])&&isset($_SESSION['password'])&&isset($_SESSION['phanquyen'])&&isset($_SESSION['hotendem'])&&isset($_SESSION['ten'])&&isset($_SESSION['sdt'])&&isset($_SESSION['diachi'])) 
+              {
+                echo '<a class="text-secondary mr-2" href="thongtincanhan.php"><i class="fas fa-user mr-2"></i>Xin Chào '.$_SESSION['ten'].'</a>';
+                echo '<form method="post" class="dangxuat" >
+                 <input type="submit" class="btn btn-sm mr-2 btn-outline-secondary " name="dangxuat" value ="Đăng Xuất">
+                </form>
+                 ';
+               
+              }
+              else
+              {
+                echo '<a class="btn btn-sm btn-outline-secondary mr-2" href="signUp.php"><i class="far fa-user mr-2"></i>Đăng Ký</a>
+            <a class="btn btn-sm btn-outline-secondary mr-2" href="signIn.php"><i class="fas fa-user mr-2"></i>Đăng Nhập</a>';
+              }
+              switch ($nutdangxuat) {
+                case 'Đăng Xuất':
+                  {
+                    session_destroy();
+                    echo '<META http-equiv="refresh" content="0;URL=index.php" charset="utf8">';
+                    break;
+                  }
+              }
+            ?>
+            
             <a href="cart.php"><i class="fas fa-shopping-cart text-secondary mr-2"></i></a>
 
           </div>

@@ -1,5 +1,20 @@
 <?php
- include_once 'header.php';
+ include 'header.php';
+ include('controllers/dangnhap_c.php');
+ $p = new DangNhap();
+ if(isset($_REQUEST['nut']))
+ {
+  $nut=$_REQUEST['nut'];
+ }
+ else
+ {
+  $nut='';
+ }
+
+if(isset($_SESSION['username'])&&isset($_SESSION['password'])&&isset($_SESSION['phanquyen'])&&isset($_SESSION['hotendem'])&&isset($_SESSION['ten'])&&isset($_SESSION['sdt'])&&isset($_SESSION['diachi']))
+{
+  echo '<script type="text/javascript">window.location="index.php"</script>';
+}
 ?>
  
 <main>
@@ -10,21 +25,32 @@
           <img class="mb-4" src="http://placehold.it/90x90" alt="Để hình ở chỗ này nè" width="90" height="90">
         </div>
         <h1 class="h3 font-weight-normal mb-3 text-center">Đăng nhập</h1>
-        <form class="mb-3">
+        <form method="post" class="mb-3">
           <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" placeholder="example@email.com" id="email" required>
+            <label for="email">Tên đăng nhập:</label>
+            <input type="email" name="username" class="form-control" placeholder="Email" id="email" required>
           </div>
           <div class="form-group">
             <label for="password">Mật khẩu:</label>
-            <input type="password" class="form-control" id="password" required>
+            <input type="password" name="password" placeholder="Mật Khẩu" class="form-control" id="password" required>
           </div>
-          <button type="submit" class="btn btn-secondary btn-block">Đăng nhập</button>
+          <input type="submit" name="nut" class="btn btn-secondary btn-block" value="Đăng Nhập">
+          <?php 
+            switch ($nut) {
+              case 'Đăng Nhập':
+                {
+                  $username=$_REQUEST['username'];
+                  $password=$_REQUEST['password'];
+                  $p->login($username,$password);
+                  break;
+                }
+            }
+          ?> 
         </form>
         <div class="text-center">
           <p>hoặc</p>
-          <a href="#" class="btn btn-secondary mb-3">Tạo tài khoản</a>
-          <p class="small"><a href="#" class="text-secondary">Quên mật khẩu hoặc tài khoản?</a></p>
+          <a href="signUp.php" class="btn btn-secondary mb-3">Tạo tài khoản</a>
+          
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 <?php
   include 'header.php';
   include 'controllers/trangchu_c.php';
-  $p = new trangchu();
+  $p = new TrangChu();
 ?>
 
 <section class="container sessionrieng">

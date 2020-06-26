@@ -1,7 +1,7 @@
 <?php
  include 'header.php';
  include 'controllers/dangky_c.php';
- $p = new dangky();
+ $p = new DangKy();
  
  if(isset($_REQUEST['nut']))
  {
