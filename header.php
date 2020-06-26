@@ -65,8 +65,9 @@
               if (isset($_SESSION['username'])&&isset($_SESSION['password'])&&isset($_SESSION['phanquyen'])&&isset($_SESSION['hotendem'])&&isset($_SESSION['ten'])&&isset($_SESSION['sdt'])&&isset($_SESSION['diachi'])) 
               {
                 echo '<a class="text-secondary mr-2" href="thongtincanhan.php"><i class="fas fa-user mr-2"></i>Xin Chào '.$_SESSION['ten'].'</a>';
-                echo '<form method="post" class="dangxuat" >
-                 <input type="submit" class="btn btn-sm mr-2 btn-outline-secondary " name="dangxuat" value ="Đăng Xuất">
+                echo '<form method="post" >
+                 <button type="submit" class="btn btn-sm mr-2 btn-outline-secondary " name="dangxuat"  value="Đăng Xuất"><i class="fas fa-times mr-2"></i>Đăng Xuất</button>
+
                 </form>
                  ';
                

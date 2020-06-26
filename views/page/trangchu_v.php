@@ -10,7 +10,7 @@ class viewHome
 			{
 				echo '
 				 <div class="carousel-item active">
-       		 		<a href="#">
+       		 		<a href="baiViet.php?baiviet='.$row['idbaiviet'].'">
          			 <img src="views/assets/img/tintuc/Tintuc'.$row['id'].'.png"   height="400px" width="100%" class="hinh" alt="even1">
           			</a>
           		</div>';
@@ -18,7 +18,7 @@ class viewHome
 			else
 			{
 				echo '<div class="carousel-item">
-      <a href="#">
+      <a href="baiViet.php?baiviet='.$row['idbaiviet'].'">
       <img src="views/assets/img/tintuc/Tintuc'.$row['id'].'.png" height="400px" width="100%"class="hinh"  alt="even">
       </a>
     </div>';	

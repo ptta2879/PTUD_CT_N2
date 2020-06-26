@@ -40,47 +40,55 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-4 col-md-6 border-right">    
-      <div class="row ">        
-        <div class="col-6">
-          <div class="hinh">
-        <img src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-600x600-400x400.jpg" class="figure-img img-fluid rounded img" alt="">
-        </div>
-        </div>
-        <div class="col-6 p-0">
-          <p class="mb-0">Day la chu ne nha</p>
-          <p>Gia ne</p>
-          <p class="small text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>  
-        </div>   
-      </div>
+   <div class="col-lg-3 col-md-6">
+      <a href="#">
+       <figure class="figure">
+        <img src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-600x600-400x400.jpg" class="figure-img img-fluid hinh" alt="Figure image">
+        <figcaption class="figure-caption">
+          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
+          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
+        </figcaption>
+      </figure>
+      </a>
     </div>
 
-    <div class="col-lg-4 col-md-6 border-right">    
-      <div class="row">
-        <div class="col-6">
-
-          <img src="http://placehold.it/180x140" class="figure-img img-fluid rounded" alt="">
-        </div>
-        <div class="col-6 p-0">
-          <p class="mb-0">Day la chu ne nha</p>
-          <p>Gia ne</p>
-          <p class="small text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>  
-        </div>   
-      </div>
+<div class="col-lg-3 col-md-6">
+      <a href="#">
+       <figure class="figure">
+        <img src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-600x600-400x400.jpg" class="figure-img img-fluid hinh" alt="Figure image">
+        <figcaption class="figure-caption">
+          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
+          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
+        </figcaption>
+      </figure>
+      </a>
     </div>
 
-    <div class="col-lg-4 col-md-6">    
-      <div class="row">
-        <div class="col-6">
-
-          <img src="http://placehold.it/180x140" class="figure-img img-fluid rounded" alt="">
-        </div>
-        <div class="col-6 p-0">
-          <p class="mb-0">Day la chu ne nha</p>
-          <p>Gia ne</p>
-          <p class="small text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>  
-        </div>   
-      </div>
+    <div class="col-lg-3 col-md-6">
+      <a href="#">
+       <figure class="figure">
+        <img src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-600x600-400x400.jpg" class="figure-img img-fluid hinh" alt="Figure image">
+        <figcaption class="figure-caption">
+          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
+          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
+        </figcaption>
+      </figure>
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <a href="#">
+       <figure class="figure">
+        <img src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-600x600-400x400.jpg" class="figure-img img-fluid hinh" alt="Figure image">
+        <figcaption class="figure-caption">
+          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
+          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
+        </figcaption>
+      </figure>
+      </a>
     </div>
 </div>
 </div>
@@ -93,46 +101,55 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-4 col-md-6 border-right">    
-      <div class="row">
-        <div class="col-6">
-
-          <img src="http://placehold.it/180x140" class="figure-img img-fluid rounded" alt="">
-        </div>
-        <div class="col-6 p-0">
-          <p class="mb-0">Day la chu ne nha</p>
-          <p>Gia ne</p>
-          <p class="small text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>  
-        </div>   
-      </div>
+    <div class="col-lg-3 col-md-6">
+      <a href="#">
+       <figure class="figure">
+        <img src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-600x600-400x400.jpg" class="figure-img img-fluid hinh" alt="Figure image">
+        <figcaption class="figure-caption">
+          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
+          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
+        </figcaption>
+      </figure>
+      </a>
     </div>
 
-    <div class="col-lg-4 col-md-6 border-right">    
-      <div class="row">
-        <div class="col-6">
-
-          <img src="http://placehold.it/180x140" class="figure-img img-fluid rounded" alt="">
-        </div>
-        <div class="col-6 p-0">
-          <p class="mb-0">Day la chu ne nha</p>
-          <p>Gia ne</p>
-          <p class="small text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>  
-        </div>   
-      </div>
+    <div class="col-lg-3 col-md-6">
+      <a href="#">
+       <figure class="figure">
+        <img src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-600x600-400x400.jpg" class="figure-img img-fluid hinh" alt="Figure image">
+        <figcaption class="figure-caption">
+          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
+          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
+        </figcaption>
+      </figure>
+      </a>
     </div>
 
-    <div class="col-lg-4 col-md-6">    
-      <div class="row">
-        <div class="col-6">
-
-          <img src="http://placehold.it/180x140" class="figure-img img-fluid rounded" alt="">
-        </div>
-        <div class="col-6 p-0">
-          <p class="mb-0">Day la chu ne nha</p>
-          <p>Gia ne</p>
-          <p class="small text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>  
-        </div>   
-      </div>
+    <div class="col-lg-3 col-md-6">
+      <a href="#">
+       <figure class="figure">
+        <img src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-600x600-400x400.jpg" class="figure-img img-fluid hinh" alt="Figure image">
+        <figcaption class="figure-caption">
+          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
+          <p class="h6 font-weight-normal mb-0 text-danger">Gia ne</p>
+          <p class="text-secondary small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
+        </figcaption>
+      </figure>
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <a href="#">
+       <figure class="figure">
+        <img src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-600x600-400x400.jpg" class="figure-img img-fluid hinh" alt="Figure image">
+        <figcaption class="figure-caption">
+          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
+          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
+        </figcaption>
+      </figure>
+      </a>
     </div>
 </div>
 </div>

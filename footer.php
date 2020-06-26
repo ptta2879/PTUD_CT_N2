@@ -1,7 +1,7 @@
 <footer class="small bg-light mt-5">
   <div class="container py-3 py-sm-5">
     <div class="row ">
-      <div class="col-12 col-sm-6 col-md-4  d-flex justify-content-center">
+      <div class="col-6 col-sm-6 col-md-3  d-flex justify-content-center">
         <div>
           <h6>Liên kết</h6>
           <ul class="list-unstyled">
@@ -13,7 +13,7 @@
         </div>
       </div>
       
-      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+      <div class="col-6 col-sm-6 col-md-3 d-flex justify-content-center">
         <div>
           <h6>Theo dõi chúng tôi</h6>
           <ul class="list-unstyled">
@@ -23,7 +23,7 @@
           </ul>
         </div>
       </div>
-      <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+      <div class="col-6 col-sm-6 col-md-3 d-flex justify-content-center">
         <div>
           <h6>Ví trí của chúng tôi:</h6>
           <address>
@@ -33,6 +33,25 @@
             <i class="fa fa-fw fa-phone" aria-hidden="true"></i> <a href="tel:+1234567890" class="text-secondary" >(123) 456-7890</a><br>
             <i class="fa fa-fw fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@domain.com" class="text-secondary" >info@domain.com</a>
           </address>
+        </div>
+      </div>
+      <div class="col-6 col-sm-6 col-md-3 d-flex justify-content-center">
+        <div>
+          <h6>FAC Cam Kết:</h6>
+        <table>
+              <tr>
+                <td><i class="fab fa-product-hunt fa-2x mr-2"></i></td>
+                <td>Đảm Bảo Chất Lượng</td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-sync-alt fa-2x mr-2"></i></td>
+                <td>Đổi trả thuận tiện</td>
+              </tr>
+              <tr>
+                <td><i class="fas fa-truck-moving fa-2x mr-2"></i></td>
+                <td>Giao Hàng Nhanh Chóng</td>
+              </tr>
+            </table>
         </div>
       </div>
     </div>
