@@ -1,5 +1,16 @@
 <?php
- include_once 'header.php';
+ include 'header.php';
+ include 'controllers/dangky_c.php';
+ $p = new dangky();
+ 
+ if(isset($_REQUEST['nut']))
+ {
+  $nut=$_REQUEST['nut'];
+ }
+ else
+ {
+  $nut='';
+ }
 ?>
  
 
@@ -14,62 +25,48 @@
           <form class="mb-3">
             <div class="row">
               <div class="form-group col-12 col-sm-6">
-                <label for="firstName">Họ và tên đệm:</label>
-                <input type="text" class="form-control" placeholder="First name" id="firstName" required>
+                <label for="firstName">Họ và Tên Đệm:</label>
+                <input type="text" name="hotendem" class="form-control" placeholder="Họ Và Tên Đệm" id="firstName"  required>
               </div> 
               <div class="form-group col-12 col-sm-6">
                 <label for="lastName">Tên:</label>
-                <input type="text" class="form-control" placeholder="Last name" id="lastName" required>
+                <input type="text" name="ten" class="form-control" placeholder="Tên"  id="lastName" required>
               </div>
             </div>
             <div class="form-group">
               <label for="email">Email:</label>
-              <input type="email" class="form-control" placeholder="example@email.com" id="email" required>
+              <input type="email" class="form-control" placeholder="example@gmail.com" name="email" id="email" required>
             </div>
             <div class="form-group">
               <label for="password">Mật khẩu:</label>
-              <input type="password" class="form-control" id="password" required>
+              <input type="password" class="form-control"  name="matkhau" required>
             </div>
-            <label>Ngày sinh:</label>
-            <div class="row no-gutters">
-              <div class="form-group col-4">
-                <label for="birthdayDay" class="sr-only">Ngày sinh</label>
-                <select class="form-control" id="birthdayDay">
-                  <option vaule="">Ngày</option>
-                  <option value="january">January</option>
-                  <option value="january">January</option>
-                </select>
-              </div>
-              <div class="form-group col-4">
-                <label for="birthdayMonth" class="sr-only">Tháng sinh</label>
-                <select class="form-control" id="birthdayMonth">
-                  <option value="">Tháng</option>
-                  <option value="january">January</option>
-                  <option value="january">January</option>
-                </select>
-              </div>
-              <div class="form-group col-4">
-                <label for="birthdayYear" class="sr-only">Năm sinh</label>
-                <select class="form-control" id="birthdayYear">
-                  <option value="1980">1980</option>
-                  <option value="1981">1981</option>
-                </select>
-              </div>
+            <div class="form-group">
+              <label>SĐT:</label>
+              <input type="number" name="sdt" class="form-control" id="SDT" placeholder="Số Điện Thoại" required>
             </div>
-            <div class="form-check form-check-inline">
-              <label class="form-check-label">
-                <input type="radio" name="exampleRadios" id="exampleRadios1" class="form-check-input" value="optionOne" checked>
-                Nam
-              </label>
+            <div class="form-group">
+              <label>Địa Chỉ:</label>
+              <input type="text" name="DiaChi" class="form-control" id="diachi" placeholder="Địa Chỉ" required>
             </div>
-            <div class="form-check form-check-inline">
-              <label class="form-check-label">
-                <input type="radio" name="exampleRadios" id="exampleRadios2" class="form-check-input" value="optionTwo">
-                Nữ
-              </label>
-            </div>
-            <button type="submit" class="btn btn-secondary btn-block mb-3">Tạo tài khoản</button>
-            <div class="alert alert-secondary small" role="alert">By clicking above you agree to our <a href="#" class="alert-link">Terms &amp; Conditions</a> and our <a href="#" class="alert-link">Privacy Policy</a>.</div>
+              <hr>
+            <input type="submit" name="nut" class="btn btn-secondary btn-block mb-3 mt-3" value="Tạo tài khoản">
+          <?php
+            switch ($nut) {
+              case 'Tạo tài khoản':
+                {
+
+                  $hovatendem=$_REQUEST['hotendem'];
+                  $name=$_REQUEST['ten'];
+                  $user=$_REQUEST['email'];
+                  $pass=md5($_REQUEST['matkhau']);
+                  $sdt=$_REQUEST['sdt'];
+                  $diachi=$_REQUEST['DiaChi'];
+                  $p->dangkytk($hovatendem,$name,$user,$pass,$sdt,$diachi);
+                  break;
+                }  
+            }
+          ?>
           </form>
           <div class="text-center">
             <p>hoặc</p>

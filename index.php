@@ -1,7 +1,7 @@
 <?php
   include 'header.php';
-  include 'controllers/HomeC.php';
-  $p = new home();
+  include 'controllers/trangchu_c.php';
+  $p = new trangchu();
 ?>
 
 <section class="container sessionrieng">
@@ -41,7 +41,7 @@
   </div>
   <div class="row">
     <div class="col-lg-4 col-md-6 border-right">    
-      <div class="row ">
+      <div class="row ">        
         <div class="col-6">
           <div class="hinh">
         <img src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-600x600-400x400.jpg" class="figure-img img-fluid rounded img" alt="">
