@@ -36,7 +36,7 @@
 <div class="container shadow-sm p-3 mb-5 mt-5 bg-white rounded">
   <div class="row">
     <div class="col-12">
-      <h1 class="h4 text-dark text-center mb-4">SẢN PHẨM MỚI</h1>
+      <h1 class="h2 text-dark text-center mb-4">SẢN PHẨM MỚI</h1>
     </div>
   </div>
   <div class="row">
@@ -97,7 +97,7 @@
 <div class="container shadow-sm p-3 mb-5 mt-5 bg-white rounded">
   <div class="row">
     <div class="col-12">
-      <h1 class="h4 text-dark text-center mb-4">SẢN PHẨM BÁN CHẠY</h1>
+      <h1 class="h2 text-dark text-center mb-4">SẢN PHẨM BÁN CHẠY</h1>
     </div>
   </div>
   <div class="row">
@@ -160,17 +160,25 @@
 <div class="container shadow-sm p-3 mb-5 bg-white rounded">
   <section>
   <div class="row">
-    <form class="input-group mb-4 col-lg-4 col-sm-12 ml-auto">
-      <input type="text" class="form-control change-boxshadow" placeholder="Tìm Kiếm" aria-label="Text input with button">
-      <span class="input-group-append">
-         <button type="button" class="btn btn-sm btn-secondary border-secondary">Search</button>
-      </span>
-    </form>
+    <div class="col-lg-12 col-12 col-sm-12 m-3">
+      <h1 class="h2 text-dark text-center mb-4">Danh Mục</h1>
+      <div class="ml-4">
+      <?php 
+        $p->danhmuc();
+      ?>
+  </div>
+    </div>
   </div>
 </section>
-
+<div class="row">
+  <div class="col-lg-12 col-12 col-sm-12 m-3">
+  <h1 class="h2 text-dark text-center mb-4">Tất Cả Sản Phẩm</h1>
+</div>
+</div>
   <div class="row">
+
     <div class="col-lg-3 col-md-6">
+
       <a href="#">
        <figure class="figure">
         <img src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-600x600-400x400.jpg" class="figure-img img-fluid hinh" alt="Figure image">

@@ -25,5 +25,14 @@ class viewHome
 			}
 		}
 	}
+	function danhmuc($dulieu)
+	{
+		for ($i=0; $i < count($dulieu) ; $i++) { 
+			$row = $dulieu[$i];
+			echo '<a style="text-decoration: none" href="?hang='.$row['id'].'" >
+        <img src="views/assets/img/nhasanxuat/nhasanxuat-'.$row['id'].'-'.$row['idchungloai'].'.jpg"width="200" height="40" class="img-thumbnail">
+        </a>';
+		}
+	}
 }
 ?>
