@@ -32,7 +32,8 @@
             </div>
             <div class="form-group">
               <label>SĐT:</label>
-              <input type="number" name="sdt" class="form-control" id="SDT" placeholder="Số Điện Thoại" required>
+              <input type="tel" name="sdt" class="form-control" id="SDT" placeholder="Số Điện Thoại"
+               required>
             </div>
             <div class="form-group">
               <label>Địa Chỉ:</label>
