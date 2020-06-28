@@ -13,6 +13,13 @@
   }
 }*/
 
+.sessionrieng{
+  margin-top: 80px;
+}
+
+.my-container {
+  max-width: 1300px;
+}
 
 .form-control:focus {
   color: #495057;

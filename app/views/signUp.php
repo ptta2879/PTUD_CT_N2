@@ -1,16 +1,5 @@
 <?php
- include 'header.php';
- include 'controllers/dangky_c.php';
- $p = new DangKy();
- 
- if(isset($_REQUEST['nut']))
- {
-  $nut=$_REQUEST['nut'];
- }
- else
- {
-  $nut='';
- }
+ include_once 'header.php';
 ?>
  
 
@@ -22,7 +11,7 @@
         <div class="col-12 col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4">
           <h1 class="mb-3 text-center">Tạo tài khoản mới</h1>
           <p class="lead">Đăng ký miễn phí.</p>
-          <form class="mb-3">
+          <form class="mb-3" method="post">
             <div class="row">
               <div class="form-group col-12 col-sm-6">
                 <label for="firstName">Họ và Tên Đệm:</label>
@@ -51,26 +40,12 @@
             </div>
               <hr>
             <input type="submit" name="nut" class="btn btn-secondary btn-block mb-3 mt-3" value="Tạo tài khoản">
-          <?php
-            switch ($nut) {
-              case 'Tạo tài khoản':
-                {
-
-                  $hovatendem=$_REQUEST['hotendem'];
-                  $name=$_REQUEST['ten'];
-                  $user=$_REQUEST['email'];
-                  $pass=md5($_REQUEST['matkhau']);
-                  $sdt=$_REQUEST['sdt'];
-                  $diachi=$_REQUEST['DiaChi'];
-                  $p->dangkytk($hovatendem,$name,$user,$pass,$sdt,$diachi);
-                  break;
-                }  
-            }
-          ?>
           </form>
+
           <div class="text-center">
+            <p class="font-weight-bold"><?php if(isset($this->message)){echo $this->message;} ?></p>
             <p>hoặc</p>
-            <a href="#" class="btn btn-secondary">Đăng nhập</a>
+            <a href="dangnhap" class="btn btn-secondary">Đăng nhập</a>
           </div>
         </div>
       </div>

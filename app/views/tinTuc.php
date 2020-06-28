@@ -1,9 +1,9 @@
 <?php
-	include_once 'header.php';
+  include_once 'header.php';
 ?>
 
 <main>
-	
+  
     <div class="container sessionrieng">
       <div class="row">
         <div class="col-12 col-md-6 col-lg-8">
@@ -126,5 +126,5 @@
 
 
 <?php
-	include_once 'footer.php';
+  include_once 'footer.php';
 ?>
