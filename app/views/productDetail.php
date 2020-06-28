@@ -1,42 +1,7 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Code with Bootstrap by PM</title>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="views/css/all.css">
-    <link href="views/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="views/fontawesome/css/fontawesome.min.css">
-
-  </head>
-
-  <style type="text/css">
-  
-  .form-control:focus {
-    color: #495057;
-    background-color: #fff;
-    /*border-color:  #6c757d;*/
-    border-color: #f8f9fa;
-    outline: 0;
-    box-shadow:  0 0 0 .2rem rgba(108,117,125,.2);
-  }
-
-  .breadcrumb {
-    background-color: #fff;
-    padding: 0.75em 0em;
-
-  }
-
-
-  .btn-detail {
-    border-radius: 4em;
-  }
-  </style>
-
-  <body>
-
+<?php 
+  include('header.php');
+ ?>
 
 <header>
     <div class="container-fluid">

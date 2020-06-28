@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-12 col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4">
         <div class=" d-flex justify-content-center">
-          <img class="mb-4" src="http://placehold.it/90x90" alt="Để hình ở chỗ này nè" width="90" height="90">
+          <img class="mb-4" src="<?php echo DIR_APP ?>/views/assets/img/logo/logo.png" alt="Để hình ở chỗ này nè" >
         </div>
         <h1 class="h3 font-weight-normal mb-3 text-center">Đăng nhập</h1>
         <form class="mb-3" method="post">

@@ -33,13 +33,13 @@
             <a href="trangchu" class="nav-link">Trang chủ</a>
           </li>  
           <li class="nav-item">
-            <a href="tinTuc.php" class="nav-link">Tin Tức</a>
+            <a href="TinTuc" class="nav-link">Tin Tức</a>
           </li>
           <li class="nav-item">
-            <a href="gioiThieu.php" class="nav-link">Giới Thiệu</a>
+            <a href="GioiThieu" class="nav-link">Giới Thiệu</a>
           </li>
           <li class="nav-item">
-            <a href="lienHe.php" class="nav-link">Liên Hệ</a>
+            <a href="LienHe" class="nav-link">Liên Hệ</a>
           </li>
 
          
@@ -78,12 +78,14 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
+      <form>
         <div class="input-group">
           <input type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
           <div class="input-group-append">
             <button class="btn btn-secondary" type="button" id="button-addon2">Search</button>
           </div>
         </div>
+      </form>
     </div>
   </div>
 </div>
