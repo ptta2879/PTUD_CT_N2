@@ -28,11 +28,10 @@
             <tr>
               <th scope="row">1</th>
               <td>
-                
-              <div class="checkbox">             
-                  <label class="check"><input type="checkbox" name="checkbox"><span class="checkmark"></span></label>
-              </div>
-                
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1"></label>
+                </div>              
               </td>
               <td>England</td>
               <td>English</td>
@@ -55,9 +54,10 @@
             <tr>
               <th scope="row">2</th>
               <td>
-                 <div class="checkbox">             
-                  <label class="check"><input type="checkbox" name="checkbox"><span class="checkmark"></span></label>
-              </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck2">
+                  <label class="custom-control-label" for="customCheck2"></label>
+                </div>              
               </td>
               <td>France</td>
               <td>French</td>
@@ -73,9 +73,10 @@
             <tr>
               <th scope="row">3</th>
               <td>
-                 <div class="checkbox">             
-                  <label class="check"><input type="checkbox" name="checkbox"><span class="checkmark"></span></label>
-              </div>               
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck3">
+                  <label class="custom-control-label" for="customCheck3"></label>
+                </div>              
               </td>
               <td>Germany</td>
               <td>German</td>

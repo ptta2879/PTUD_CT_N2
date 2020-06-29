@@ -63,6 +63,7 @@
       <!-- <div>
         <a href="#" class="btn btn-sm btn-secondary ">Thêm</a>
       </div> -->
+
     
       <div class="table-responsive">
         <table class="table table-striped table-sm ">
@@ -81,17 +82,9 @@
               <td class="align-self-center">England</td>
               <td>English</td>
               <td>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios3" value="option1" checked>
-                  <label class="form-check-label" for="exampleRadios1">
-                    Ẩn
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios3" value="option2">
-                  <label class="form-check-label" for="exampleRadios1">
-                    Hiện
-                  </label>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                  <label class="custom-control-label" for="customSwitch1">Xác nhận</label>
                 </div>
               </td>
               <td>
@@ -105,17 +98,9 @@
               <td>English</td>
             
               <td>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios3" value="option1" checked>
-                  <label class="form-check-label" for="exampleRadios2">
-                    Ẩn
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios3" value="option2">
-                  <label class="form-check-label" for="exampleRadios2">
-                    Hiện
-                  </label>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                  <label class="custom-control-label" for="customSwitch2">Xác nhận</label>
                 </div>
               </td>
               <td>
@@ -128,8 +113,14 @@
              
               <td class="align-self-center">England</td>
               <td>English</td>
-             
+              
               <td>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                  <label class="custom-control-label" for="customSwitch3">Xác nhận</label>
+                </div>
+              </td>
+              <!-- <td>
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios3" value="option1" checked>
                   <label class="form-check-label" for="exampleRadios3">
@@ -142,7 +133,7 @@
                     Hiện
                   </label>
                 </div>
-              </td>
+              </td> -->
               <td>
                 <a href="#" class="btn btn-sm btn-secondary ">Xác nhận</a>
               </td>

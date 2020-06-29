@@ -33,7 +33,7 @@
             <a href="trangchu"  class="nav-link <?php echo $this->active == 'index'  ? 'active':''  ?>">Trang chủ</a>
           </li>  
           <li class="nav-item">
-            <a href="tintuc.html" class="nav-link <?php echo $this->active == 'tinTuc'  ? 'active':''  ?>">Tin Tức</a>
+            <a href="tintuc.html" class="nav-link <?php echo $this->active == 'thenew'  ? 'active':''  ?>">Tin Tức</a>
           </li>
           <li class="nav-item">
             <a href="gioiThieu.php" class="nav-link <?php echo $this->active == 'gioithieu'  ? 'active':''  ?>">Giới Thiệu</a>

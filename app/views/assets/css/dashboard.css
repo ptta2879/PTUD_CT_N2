@@ -105,3 +105,27 @@ body {
   border-color: transparent;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
 }
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    /*color: #fff;*/
+    border-color: #adb5bd;
+    background-color: #90919d;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 .2rem rgba(116, 121, 126, 0.25);
+}
+
+/*.custom-control-label::before {
+    border: #6c7278 solid 1px;
+}
+*/
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #767879;
+}
+
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    /*color: #fff;*/
+    background-color: #e3e5e8;
+    border-color: #cbcccd;
+}

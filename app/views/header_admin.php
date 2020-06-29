@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="<?php echo DIR_APP ?>views/assets/css/all.css">
     <link href="<?php echo DIR_APP ?>views/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo DIR_APP ?>views/assets/fontawesome/css/fontawesome.min.css">
+    <!-- <link rel="stylesheet" href="<?php echo DIR_APP ?>views/assets/fontawesome/css/fontawesome.min.css"> -->
 
     <style>
       .bd-placeholder-img {

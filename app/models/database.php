@@ -3,11 +3,11 @@ class database {
 
 	function databaseconnect()
 	{
-		$dsn="mysql:host=localhost;dbname=db_vuive";
+		$dsn="mysql:host=".DB_HOST.";dbname=".DB_NAME."";
 
-		$username='vuive';
+		$username=DB_USER;
 
-		$password='123456';
+		$password=DB_PASS;
 
 		$options=array(PDO::MYSQL_ATTR_INIT_COMMAND=>'SET NAMES utf8');
 
