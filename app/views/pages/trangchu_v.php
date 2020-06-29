@@ -11,7 +11,7 @@ class trangchu_v
 			{
 				echo '
 				 <div class="carousel-item active">
-       		 		<a href="baiViet.php?baiviet='.$row['idbaiviet'].'">
+       		 		<a href="baiViet?baiviet='.$row['idbaiviet'].'">
          			 <img src="'.DIR_APP.'views/assets/img/tintuc/Tintuc'.$row['id'].'.png"   height="400px" width="100%" class="hinh" alt="even1">
           			</a>
           		</div>';
@@ -19,7 +19,7 @@ class trangchu_v
 			else
 			{
 				echo '<div class="carousel-item">
-      <a href="baiViet.php?baiviet='.$row['idbaiviet'].'">
+      <a href="baiViet?baiviet='.$row['idbaiviet'].'">
       <img src="'.DIR_APP.'views/assets/img/tintuc/Tintuc'.$row['id'].'.png" height="400px" width="100%"class="hinh"  alt="even">
       </a>
     </div>';	
@@ -56,6 +56,45 @@ class trangchu_v
        </a>
     </div>
 ';
+		}
+	}
+
+	function sanphambanchay()
+	{
+		$dulieu = $this->data["sanphambanchay"];
+		for($i=0;$i<count($dulieu);$i++)
+		{
+			$row=$dulieu[$i];
+			echo '<div class="col-lg-3 col-md-6">
+      <a href="chitiet?sanpham='.$row['id'].'">
+       <figure class="figure">
+        <img src="'.DIR_APP.'views/assets/img/sanpham/sanpham-dh-'.$row['id'].'.PNG" width="300" height="285" class="figure-img img-fluid hinh" alt="Figure image">
+        <figcaption class="figure-caption">
+ <p class="h6 mb-0 font-weight-bold text-dark text-center">'.$row['tensp'].'</p>
+          <p class="h6 font-weight-normal mb-0 text-danger text-center">'.$row['gia'].' VNĐ</p>
+                  </figcaption>
+      </figure>
+      </a>
+    </div>';
+		}
+	}
+	function tatcasp()
+	{
+		$dulieu = $this->data["tatcasp"];
+		for($i=0;$i<count($dulieu);$i++)
+		{
+			$row=$dulieu[$i];
+			echo '<div class="col-lg-3 col-md-6">
+      <a href="chitiet?sanpham='.$row['id'].'">
+       <figure class="figure">
+        <img src="'.DIR_APP.'views/assets/img/sanpham/sanpham-dh-'.$row['id'].'.PNG" width="300" height="285" class="figure-img img-fluid hinh" alt="Figure image">
+        <figcaption class="figure-caption">
+ <p class="h6 mb-0 font-weight-bold text-dark text-center">'.$row['tensp'].'</p>
+          <p class="h6 font-weight-normal mb-0 text-danger text-center">'.$row['gia'].' VNĐ</p>
+                  </figcaption>
+      </figure>
+      </a>
+    </div>';
 		}
 	}
 }

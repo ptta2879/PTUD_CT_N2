@@ -25,9 +25,8 @@
         </form>
         <div class="text-center">
           <p>hoặc</p>
-          <a href="#" class="btn btn-secondary mb-3">Tạo tài khoản</a>
-          <p class="small"><a href="#" class="text-secondary">Quên mật khẩu hoặc tài khoản?</a></p>
-        </div>
+          <a href="dangky" class="btn btn-secondary mb-3">Tạo tài khoản</a>
+          </div>
       </div>
     </div>
   </div>
