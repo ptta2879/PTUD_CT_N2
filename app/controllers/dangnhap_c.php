@@ -37,8 +37,14 @@ class dangnhap extends Controller
 					$_SESSION['sdt']=$sdt;
 					$_SESSION['diachi']=$diachi;
 				}
+				if($_SESSION['phanquyen'] == 1){
+					echo '<script type="text/javascript">window.location="admin.html"</script>';
+				}
+				else {
+					echo '<script type="text/javascript">window.location="trangchu.html"</script>';
+				}
 
-				echo '<script type="text/javascript">window.location="index.php"</script>';
+				
 			}
 			else 
 			{

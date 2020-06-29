@@ -6,9 +6,9 @@
     
     <title>Code with Bootstrap by PM</title>
 
-    <link rel="stylesheet" href="assets/css/all.css">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="<?php echo DIR_APP ?>views/assets/css/all.css">
+    <link href="<?php echo DIR_APP ?>views/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo DIR_APP ?>views/assets/fontawesome/css/fontawesome.min.css">
 
     <style>
       .bd-placeholder-img {
@@ -27,7 +27,7 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="assets/css/dashboard.css" rel="stylesheet">
+    <link href="<?php echo DIR_APP ?>views/assets/css/dashboard.css" rel="stylesheet">
   </head>
   <body>
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
@@ -47,7 +47,7 @@
   <div class="sidebar-sticky pt-3">
     <ul class="nav flex-column">
       <li class="nav-item">
-        <a class="nav-link " href="admin.php">
+        <a class="nav-link <?php echo $this->active == 'admin'  ? 'active':''  ?>" href="admin.php">
           <span><i class="fas fa-home"></i>
           Trang chủ</span>
         </a>
@@ -59,7 +59,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="quanli_sanpham.php">
+        <a class="nav-link <?php echo $this->active == 'quanli_sanpham'  ? 'active':''  ?>" href="<?php echo DIR ?>quanlisanpham">
           <span><i class="fas fa-shopping-cart"></i></span>
           Quản lí sản phẩm
         </a>

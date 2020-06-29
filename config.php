@@ -5,7 +5,8 @@ define("PATH_ROOT", dirname(__FILE__). '/');
 define("PATH_APP", PATH_ROOT. 'app/');
 define("PATH_LIB", PATH_ROOT. 'lib/');
 
-define("DIR_ROOT", '');
+define("DIR", 'http://localhost/PTUD_CT_N2/');
+define("DIR_ROOT", '/PTUD_CT_N2/');
 define("DIR_APP", DIR_ROOT. 'app/');
 define("DIR_LIB", DIR_ROOT. 'lib/');
 
