@@ -10,7 +10,7 @@
           <h2 class="mb-3">Tất Cả Tin Tức</h2>
           <article class="mb-3">
             <header class="mb-2">
-              <h1><a href="baiViet.php">Text blog post title</a></h1>
+              <h1><a href="baiviet">Text blog post title</a></h1>
               <div class="small">Viết Vào: <time datetime="2017-03-12T10:24">Saturday, June, 2020 at 11:39 PM</time></div>
             </header>
             <figure class="figure">
