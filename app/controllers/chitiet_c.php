@@ -7,7 +7,7 @@
 		
 		function index()
 		{
-			$sanphamchitiet = 
+			// $sanphamchitiet = 
 			$this->view->render('productDetail');
 		}
 	}
