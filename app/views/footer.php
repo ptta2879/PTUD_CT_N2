@@ -5,10 +5,10 @@
         <div>
           <h6>Liên kết</h6>
           <ul class="list-unstyled">
-            <li><a class="text-secondary" href="index.php">Trang chủ</a></li>
-            <li><a class="text-secondary" href="tintuc.php">Tin tức</a></li>
-            <li><a class="text-secondary" href="gioithieu.php">Giới thiệu</a></li>
-            <li><a class="text-secondary" href="lienhe.php">Liên hệ</a></li>
+            <li><a class="text-secondary" href="TrangChu">Trang chủ</a></li>
+            <li><a class="text-secondary" href="TinTuc">Tin tức</a></li>
+            <li><a class="text-secondary" href="GioiThieu">Giới thiệu</a></li>
+            <li><a class="text-secondary" href="LienHe">Liên hệ</a></li>
           </ul>
         </div>
       </div>

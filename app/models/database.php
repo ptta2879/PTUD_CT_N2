@@ -1,7 +1,7 @@
 <?php
 class database {
 
-	function database()
+	function databaseconnect()
 	{
 		$dsn="mysql:host=localhost;dbname=db_vuive";
 
@@ -21,7 +21,7 @@ class database {
 
     {
 
-        $link=$this->database();
+        $link=$this->databaseconnect();
 
         $ketqua=$link->prepare($sql);
 
@@ -38,7 +38,7 @@ class database {
 
     {
 
-	    $link=$this->database();
+	    $link=$this->databaseconnect();
 
 	    $ketqua=$link->prepare("INSERT into taikhoan(username,password,phanquyen,hotendem,ten,sdt,diachi) VALUES(:username, :password,:phanquyen,:hotendem,:ten,:sdt,:diachi)");
 	    // print_r($ketqua);

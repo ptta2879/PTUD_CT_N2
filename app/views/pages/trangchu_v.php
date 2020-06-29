@@ -36,5 +36,27 @@ class trangchu_v
         </a>';
 		}
 	}
+	function sanphammoi()
+	{
+		$dulieu = $this->data["sanphammoi"];
+		for($i=0;$i<count($dulieu);$i++)
+		{
+			$row=$dulieu[$i];
+			echo'
+			<div class="col-lg-3 col-md-6">
+      <a href="chitiet?sanpham='.$row['id'].'">
+			<figure class="figure">
+        <img src="'.DIR_APP.'views/assets/img/sanpham/sanpham-dh-'.$row['id'].'.PNG" width="300" height="285" class="figure-img img-fluid hinh" alt="Figure image">
+        <figcaption class="figure-caption">
+          <p class="h6 mb-0 font-weight-bold text-dark text-center">'.$row['tensp'].'</p>
+          <p class="h6 font-weight-normal mb-0 text-danger text-center">'.$row['gia'].' VNĐ</p>
+          
+        </figcaption>
+      </figure>
+       </a>
+    </div>
+';
+		}
+	}
 }
 ?>

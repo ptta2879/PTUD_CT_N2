@@ -31,6 +31,8 @@
 
 
 <main>
+  
+</div>
 <div class="container shadow-sm p-3 mb-5 mt-5 bg-white rounded">
   <div class="row">
     <div class="col-12">
@@ -38,56 +40,12 @@
     </div>
   </div>
   <div class="row">
-   <div class="col-lg-3 col-md-6">
-      <a href="#">
-       <figure class="figure">
-        <img src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-600x600-400x400.jpg" class="figure-img img-fluid hinh" alt="Figure image">
-        <figcaption class="figure-caption">
-          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
-          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
-        </figcaption>
-      </figure>
-      </a>
-    </div>
-
-<div class="col-lg-3 col-md-6">
-      <a href="#">
-       <figure class="figure">
-        <img src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-600x600-400x400.jpg" class="figure-img img-fluid hinh" alt="Figure image">
-        <figcaption class="figure-caption">
-          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
-          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
-        </figcaption>
-      </figure>
-      </a>
-    </div>
-
-    <div class="col-lg-3 col-md-6">
-      <a href="#">
-       <figure class="figure">
-        <img src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-600x600-400x400.jpg" class="figure-img img-fluid hinh" alt="Figure image">
-        <figcaption class="figure-caption">
-          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
-          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
-        </figcaption>
-      </figure>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-6">
-      <a href="#">
-       <figure class="figure">
-        <img src="https://cdn.tgdd.vn/Products/Images/42/219208/vsmart-joy-3-4gb-den-600x600-400x400.jpg" class="figure-img img-fluid hinh" alt="Figure image">
-        <figcaption class="figure-caption">
-          <p class="h6 mb-0 font-weight-bold text-dark">Ten san pham</p>
-          <p class="h6 font-weight-normal mb-0 text-dark">Gia ne</p>
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus eos odio ab, quia consequuntur</p>
-        </figcaption>
-      </figure>
-      </a>
-    </div>
+   
+       <?php
+       $this->page->sanphammoi();
+       ?>
+     
+    
 </div>
 </div>
 
