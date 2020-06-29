@@ -55,7 +55,10 @@ body {
 }
 
 .sidebar .nav-link.active {
-  color: #007bff;
+  /*color: #007bff;*/
+  color: #f3f3f3;
+  background-color: #545b62;
+  /*background-color: #343a40;*/
 }
 
 .sidebar .nav-link:hover .feather,
@@ -67,6 +70,7 @@ body {
   font-size: .75rem;
   text-transform: uppercase;
 }
+
 
 /*
  * Navbar

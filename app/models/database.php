@@ -76,5 +76,17 @@ class database {
 
     }
 
+
+    public function themxoasua($sql) {
+		$link = $this->database();
+		$ketqua = $link->prepare($sql);
+		if($ketqua->execute()) {
+			return 1;
+		}
+		else {
+			return 0;
+		}
+	}
+
 }
 ?>

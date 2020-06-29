@@ -30,16 +30,16 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a href="trangchu" class="nav-link">Trang chủ</a>
+            <a href="trangchu"  class="nav-link <?php echo $this->active == 'index'  ? 'active':''  ?>">Trang chủ</a>
           </li>  
           <li class="nav-item">
-            <a href="tinTuc.php" class="nav-link">Tin Tức</a>
+            <a href="tintuc.html" class="nav-link <?php echo $this->active == 'tinTuc'  ? 'active':''  ?>">Tin Tức</a>
           </li>
           <li class="nav-item">
-            <a href="gioiThieu.php" class="nav-link">Giới Thiệu</a>
+            <a href="gioiThieu.php" class="nav-link <?php echo $this->active == 'gioithieu'  ? 'active':''  ?>">Giới Thiệu</a>
           </li>
           <li class="nav-item">
-            <a href="lienHe.php" class="nav-link">Liên Hệ</a>
+            <a href="lienHe.php" class="nav-link <?php echo $this->active == 'lienhe'  ? 'active':''  ?>">Liên Hệ</a>
           </li>
 
          
@@ -49,7 +49,7 @@
         <?php
           if (isset($_SESSION['username'])&&isset($_SESSION['password'])&&isset($_SESSION['phanquyen'])&&isset($_SESSION['hotendem'])&&isset($_SESSION['ten'])&&isset($_SESSION['sdt'])&&isset($_SESSION['diachi'])) 
           {
-            echo '<a class="text-secondary mr-2" href="thongtincanhan.php"><i class="fas fa-user mr-2"></i>Xin Chào '.$_SESSION['ten'].'</a>';
+            echo '<a class="text-secondary mr-2" href="thongtincanhan.html"><i class="fas fa-user mr-2"></i>Xin Chào '.$_SESSION['ten'].'</a>';
             echo '<form method="post" >
              <button type="submit" class="btn btn-sm mr-2 btn-outline-secondary " name="dangxuat"  value="Đăng Xuất"><i class="fas fa-times mr-2"></i>Đăng Xuất</button>
 
@@ -63,6 +63,7 @@
         <a class="btn btn-sm btn-outline-secondary mr-2" href="dangnhap"><i class="fas fa-user mr-2"></i>Đăng Nhập</a>';
           }
         ?>
+
     
         <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-search text-secondary ml-2 mr-4"></i></a>
         <a href="cart.php"><i class="fas fa-shopping-cart text-secondary mr-2"></i></a>
@@ -71,8 +72,6 @@
     </div>
   </nav>
 </header>
-
-
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
