@@ -33,15 +33,21 @@
             <a href="trangchu"  class="nav-link <?php echo $this->active == 'index'  ? 'active':''  ?>">Trang chủ</a>
           </li>  
           <li class="nav-item">
-            <a href="tintuc.html" class="nav-link <?php echo $this->active == 'tinTuc'  ? 'active':''  ?>">Tin Tức</a>
+            <a href="tintuc" class="nav-link <?php echo $this->active == 'thenew'  ? 'active':''  ?>">Tin Tức</a>
           </li>
           <li class="nav-item">
-            <a href="gioiThieu.php" class="nav-link <?php echo $this->active == 'gioithieu'  ? 'active':''  ?>">Giới Thiệu</a>
+            <a href="gioiThieu" class="nav-link <?php echo $this->active == 'gioithieu'  ? 'active':''  ?>">Giới Thiệu</a>
           </li>
           <li class="nav-item">
-            <a href="lienHe.php" class="nav-link <?php echo $this->active == 'lienhe'  ? 'active':''  ?>">Liên Hệ</a>
+            <a href="lienHe" class="nav-link <?php echo $this->active == 'lienhe'  ? 'active':''  ?>">Liên Hệ</a>
           </li>
-
+<?php if(isset($_SESSION['username'])&&isset($_SESSION['password'])&&isset($_SESSION['phanquyen'])&&isset($_SESSION['hotendem'])&&isset($_SESSION['ten'])&&isset($_SESSION['sdt'])&&isset($_SESSION['diachi'])&&$_SESSION['phanquyen']==1)
+          {
+            echo '</li>
+          <li class="nav-item">
+            <a href="admin" class="nav-link">Trang Quản Lý</a>
+          </li>';
+          } ?>
          
 
         </ul>
@@ -62,6 +68,7 @@
             echo '<a class="btn btn-sm btn-outline-secondary mr-2" href="dangky"><i class="far fa-user mr-2"></i>Đăng Ký</a>
         <a class="btn btn-sm btn-outline-secondary mr-2" href="dangnhap"><i class="fas fa-user mr-2"></i>Đăng Nhập</a>';
           }
+
         ?>
 
     
