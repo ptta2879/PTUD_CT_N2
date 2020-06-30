@@ -22,7 +22,7 @@
         <div class="row">
           <div class="col-12">
           <h3 class="card-text text-danger font-weight-bold">67.000 VND</h3>
-          
+          <?php $this->page->soluong(); ?>
           </div>
         </div>
         <div class="row">

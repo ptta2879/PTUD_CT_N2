@@ -48,7 +48,7 @@
                 <td>Đổi trả thuận tiện</td>
               </tr>
               <tr>
-                <td><i class="fas fa-truck-moving fa-2x mr-2"></i></td>
+                <td><i class="fas fa-shipping-fast fa-2x mr-2"></i></td>
                 <td>Giao Hàng Nhanh Chóng</td>
               </tr>
             </table>
