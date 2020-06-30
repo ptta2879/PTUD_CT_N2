@@ -90,17 +90,12 @@
       <div class="col-12 d-flex justify-content-center mt-5 mb-5">
         <nav aria-label="...">
           <ul class="pagination shadow-sm">
-            <li class="page-item">
-              <a class="page-link text-secondary" href="#" >Previous</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item active">
-              <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#">Next</a>
-            </li>
+            
+          <?php 
+
+          $this->page->phantrang();
+
+           ?>
           </ul>
         </nav>
       </div>
