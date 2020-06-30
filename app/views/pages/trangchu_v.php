@@ -97,5 +97,18 @@ class trangchu_v
     </div>';
 		}
 	}
+	function phantrang()
+	{
+		$dulieu = $this->data['totalpages'];
+		$dulieu1 = $this->data['hang'];
+		
+		for ($i=1;$i<=$dulieu;$i++)
+		{
+			echo '
+			<li class="page-item"><a class="page-link" href="?hang='.$dulieu1.'&trang='.$i.'">'.$i.'</a></li>
+			';
+		}
+	}
+	
 }
 ?>
