@@ -1,23 +1,11 @@
-<?php
-
-	/**
-	 * 
-	 */
-	class quanlibaiviet extends Controller
+<?php /**
+ * 
+ */
+class quanlibaiviet extends Controller
+{
+	
+	function index()
 	{
-		
-		public function index()
-			{
-			$this->view->render('thembaiviet');
-		}
-
-		public function thembaiviet() {
-
-			$this->view->render('thembaiviet');
-		}
-	
-		
+		$this->view->render('quanli_baiviet');
 	}
-	
-
-?>
+} ?>

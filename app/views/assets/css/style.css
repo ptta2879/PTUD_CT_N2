@@ -96,6 +96,11 @@
     background-color: #2c2525;
 }*/
 
+.custom-select {
+  width: 4em;
+}
+
+
 .custom-control-input:focus ~ .custom-control-label::before {
     box-shadow: 0 0 0 .2rem rgba(116, 121, 126, 0.25);
 }

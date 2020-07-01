@@ -34,6 +34,7 @@
 
     <div class="col-lg-4 col-md-6">
       <h3 class="h4 card-text text-danger font-weight-bold">67.000 VND</h3>
+      <?php $this->page->soluong(); ?>
      <!--  <div class="row">
         <div class="col-12 mb-3"> -->
           <form class="form-inline mb-3">

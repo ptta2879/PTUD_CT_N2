@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <title>Code with Bootstrap by PM</title>
+    <title>ADMIN FAST AND CONVENIENT</title>
 
     <link rel="stylesheet" href="<?php echo DIR_APP ?>views/assets/css/all.css">
     <link href="<?php echo DIR_APP ?>views/assets/css/bootstrap.min.css" rel="stylesheet">
@@ -31,15 +31,11 @@
   </head>
   <body>
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">Vui vẻ không quạo</a>
+  <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="trangchu">Vui vẻ không quạo</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-  <ul class="navbar-nav px-3">
-    <li class="nav-item text-nowrap">
-      <a class="nav-link" href="#">Sign out</a>
-    </li>
+  
   </ul>
 </nav>
 
@@ -54,43 +50,43 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="quanlidonhang.php">
-          <span><i class="fas fa-archive"></i></span>
+        <a class="nav-link" href="<?php echo DIR ?>quanlidonhang">
+          <span><i class="fas fa-dolly-flatbed"></i></span>
           Quản lí đơn hàng
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link <?php echo $this->active == 'quanlisanpham'  ? 'active':''  ?>" href="<?php echo DIR ?>quanlisanpham">
-          <span><i class="fas fa-shopping-cart"></i></span>
+        <a class="nav-link <?php echo $this->active == 'quanli_sanpham'  ? 'active':''  ?>" href="<?php echo DIR ?>quanlisanpham">
+          <span><i class="fas fa-boxes"></i></span>
           Quản lí sản phẩm
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="quanlibaiviet.php">
+        <a class="nav-link" href="<?php echo DIR ?>quanlibaiviet">
           <span><i class="fas fa-edit"></i></span>
           Quản lí bài viết
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="quanlihangtonkho.php">
-          <span><i class="fas fa-user-friends"></i></span>
+        <a class="nav-link" href="<?php echo DIR ?>quanlihangtonkho">
+          <span><i class="fas fa-warehouse"></i></span>
           Quản lí hàng tồn kho
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="quanlinhacungcap.php">
-          <span><i class="fas fa-user-friends"></i></span>
+        <a class="nav-link" href="<?php echo DIR ?>quanlinhacungcap">
+          <span><i class="fas fa-exchange-alt"></i></span>
           Quản lí nhà cung cấp
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="quanlithuoctinh.php">
+        <a class="nav-link" href="<?php echo DIR ?>quanlithuoctinh">
           <span><i class="fas fa-clipboard-list"></i></span>
           Quản lí thuộc tính
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="quanlitaikhoannhanvien.php">
+        <a class="nav-link" href="<?php echo DIR ?>quanlitaikhoannhanvien">
           <span><i class="fas fa-user-friends"></i></span>
           Quản lí tài khoản nhân viên
         </a>
