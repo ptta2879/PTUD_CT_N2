@@ -61,7 +61,14 @@
               </td>
               <td>France</td>
               <td>French</td>
-              <td>Paris</td>
+              <td>
+                <select class="custom-select" id="inlineFormCustomSelectPref">
+                <option selected>1</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              </td>
               <td>England</td>
               <td>
                 <a href="#" class="btn btn-sm btn-secondary ">Cập nhật</a>
@@ -80,7 +87,14 @@
               </td>
               <td>Germany</td>
               <td>German</td>
-              <td>Berlin</td>
+              <td>
+                <select class="custom-select" id="inlineFormCustomSelectPref">
+                <option selected>1</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              </td>
               <td>England</td>
               <td>
                 <a href="#" class="btn btn-sm btn-secondary ">Cập nhật</a>

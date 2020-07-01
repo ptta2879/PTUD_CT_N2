@@ -12,6 +12,14 @@ class Loader {
 		$url = $this->UrlProcess();
 		// print_r($url);
 
+		if($url[0] == 'dangxuat')
+		{
+			// $nutdangxuat=$_REQUEST['dangxuat'];			
+            session_destroy();
+            echo '<META http-equiv="refresh" content="0;URL=trangchu" charset="utf8">';
+             
+        }
+
 		if (file_exists("./app/controllers/".$url[0]."_c.php")) {
 			// require_once "./app/controllers/".$arr[0].".php";
 			$this->controller = $url[0];
@@ -19,7 +27,7 @@ class Loader {
 		}
 
 		require_once "./app/controllers/".$this->controller."_c.php";
-		$controller = new $this->controller;
+		$this->controller = new $this->controller;
 
 		if(isset($url[1])) {
 			if (method_exists( $this->controller, $url[1])) {
@@ -34,22 +42,16 @@ class Loader {
 		}
 
 
-
-		if(isset($_REQUEST['dangxuat']))
-		{
-			$nutdangxuat=$_REQUEST['dangxuat'];			
-            session_destroy();
-            echo '<META http-equiv="refresh" content="0;URL=trangchu" charset="utf8">';
-             
-         }
+		// print_r($this->controller); die();
+		
 
 		
 		// print_r($_SESSION);
 		// die();
 
 
-
-		$controller->{$this->action}($this->params);
+         // print_r($this->action); die();
+		$this->controller->{$this->action}($this->params);
 
 		// call_user_func_array(array($this->controller, $this->action), $this->params);
 	}

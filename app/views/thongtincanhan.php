@@ -36,7 +36,7 @@
 
   <div class="row m-4">
     <div class="col-2">
-      <button type="button" class="btn btn-secondary btn-sm mb-4" data-toggle="modal" data-target="#suathongtin">Sửa thông tin cá nhân</button>
+      <button type="button" class="btn btn-secondary btn-sm mb-4" data-toggle="modal" data-target="#suathongtin">Sửa thông tin</button>
     </div>
     <div class="col-2">
       <button type="button" class="btn btn-secondary btn-sm mb-4" data-toggle="modal" data-target="#doimatkhau">Đổi mật khẩu</button>
@@ -53,7 +53,7 @@
     <div class="modal-content">
       <form name="suathongtin" method="post">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Nhâp thông tin cần sửa</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Nhập thông tin cần sửa</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

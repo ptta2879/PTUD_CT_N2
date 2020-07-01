@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -20,7 +20,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container my-container">
     <a class="navbar-brand" href="index.php">
-      <img src="<?php echo DIR_APP ?>views/assets/img/logo/logo.png" style="width: 6em;" class="d-inline-block align-top" alt="" loading="lazy">
+      <img src="<?php echo DIR_APP ?>views/assets/img/logo/logo.png" style="width: 6em;" class="d-inline-block align-top" alt="" >
       
     </a>
 
@@ -56,10 +56,8 @@
           if (isset($_SESSION['username'])&&isset($_SESSION['password'])&&isset($_SESSION['phanquyen'])&&isset($_SESSION['hotendem'])&&isset($_SESSION['ten'])&&isset($_SESSION['sdt'])&&isset($_SESSION['diachi'])) 
           {
             echo '<a class="text-secondary mr-2" href="thongtincanhan.html"><i class="fas fa-user mr-2"></i>Xin Chào '.$_SESSION['ten'].'</a>';
-            echo '<form method="post" >
-             <button type="submit" class="btn btn-sm mr-2 btn-outline-secondary " name="dangxuat"  value="Đăng Xuất"><i class="fas fa-times mr-2"></i>Đăng Xuất</button>
-
-            </form>
+            echo 
+            '<a class="btn btn-sm mr-2 btn-outline-secondary " href="dangxuat"><i class="fas fa-times mr-2"></i>Đăng Xuất</a>
              ';
            
           }
@@ -70,10 +68,13 @@
           }
 
         ?>
+     <!--  <form method="post" >
+       <button type="submit" class="btn btn-sm mr-2 btn-outline-secondary " name="dangxuat"  value="Đăng Xuất"><i class="fas fa-times mr-2"></i>Đăng Xuất</button>
+      </form> -->
 
     
         <a href="#" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-search text-secondary ml-2 mr-4"></i></a>
-        <a href="cart.php"><i class="fas fa-shopping-cart text-secondary mr-2"></i></a>
+        <a href="giohang.html"><i class="fas fa-shopping-cart text-secondary mr-2"></i></a>
 
       </div>
     </div>
@@ -83,15 +84,17 @@
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
+    <form>
     <div class="modal-content">
-      <form>
+      
         <div class="input-group">
           <input type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
           <div class="input-group-append">
             <button class="btn btn-secondary" type="button" id="button-addon2">Search</button>
           </div>
         </div>
-      </form>
+      
     </div>
+    </form>
   </div>
 </div>

@@ -45,7 +45,9 @@ class trangchu extends Controller {
 			//Tong so trang 
 			$total_records=count($tongsanpham);
 			$total_pages=ceil($total_records/8);
-		$this->view->data = ["slide" => $slide, "danhmuc" => $danhmuc, "sanphammoi" => $sanphammoi,"sanphambanchay" => $sanphambanchay,"tatcasp" => $tatcasp,"totalpages"=>$total_pages,"hang"=>$hang];
+		$this->view->data = ["slide" => $slide, "danhmuc" => $danhmuc, "sanphammoi" => $sanphammoi,"sanphambanchay" => $sanphambanchay,"tatcasp" => 
+			$tatcasp,"totalpages"=>$total_pages,"hang"=>$hang];
+		// $this->view->data = ["slide" => $slide, "danhmuc" => $danhmuc, "sanphammoi" => $sanphammoi,"sanphambanchay" => $sanphambanchay];
 		$this->view->render('index', 'trangchu_v');
 		// $this->view->data = 'dang o trong page';
 		// $this->view->render('index','trangchu');

@@ -5,8 +5,8 @@
 
 <main>
 
-  <div class="jumbotron jumbotron-fluid sessionrieng">
-    <div class="container">
+  <!-- <div class="jumbotron jumbotron-fluid sessionrieng"> -->
+    <div class="container sessionrieng">
       <div class="row">
         <div class="col-12 col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4">
           <h1 class="mb-3 text-center">Tạo tài khoản mới</h1>
@@ -51,7 +51,7 @@
         </div>
       </div>
     </div>
-  </div>  
+  <!-- </div>   -->
 
 </main>
 

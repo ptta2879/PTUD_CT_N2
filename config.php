@@ -6,7 +6,7 @@ define("PATH_APP", PATH_ROOT. 'app/');
 define("PATH_LIB", PATH_ROOT. 'lib/');
 
 define("DIR", 'http://fac.com/');
-define("DIR_ROOT", '');
+define("DIR_ROOT", '/');
 define("DIR_APP", DIR_ROOT. 'app/');
 define("DIR_LIB", DIR_ROOT. 'lib/');
 
@@ -18,4 +18,4 @@ define("DIR_LIB", DIR_ROOT. 'lib/');
 	define('DB_PASS','123456');
 	define('DB_NAME','db_vuive');
 
-?>
+?> 
