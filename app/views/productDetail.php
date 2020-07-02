@@ -55,7 +55,12 @@
             </select>
 
           </form>
-        <!-- </div>
+          <?php foreach ($this->data['thuoctinh'] as $key => $value) {
+              echo $this->data['mota'][$key]."____".$value;
+              echo "<br>";
+          }
+          ?>
+       <!-- </div>
       </div> -->
         <div class="xuong"> 
           <a href="#" class="btn btn-outline-danger btn btn-block ">Mua ngay</a>
