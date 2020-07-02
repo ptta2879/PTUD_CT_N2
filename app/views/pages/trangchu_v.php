@@ -32,7 +32,7 @@ class trangchu_v
 		for ($i=0; $i < count($dulieu) ; $i++) { 
 			$row = $dulieu[$i];
 			echo '<a style="text-decoration: none" href="?hang='.$row['id'].'" >
-        <img src="'.DIR_APP.'views/assets/img/nhasanxuat/nhasanxuat-'.$row['id'].'-'.$row['idchungloai'].'.jpg"width="200" height="40" class="img-thumbnail">
+        <img src="'.DIR_APP.'views/assets/img/nhasanxuat/nhasanxuat-'.$row['id'].'.jpg"width="200" height="40" class="img-thumbnail">
         </a>';
 		}
 	}
