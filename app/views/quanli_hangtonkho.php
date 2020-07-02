@@ -55,7 +55,7 @@
               <td>Berlin</td>
               <td>England</td>
               <td>
-                <a href="#" class="btn btn-sm btn-secondary " data-toggle="modal" data-target="#hangtonkho">Sửa</a>
+                <a href="#" class="btn btn-sm btn-secondary open-modal" data-id="778899" data-toggle="modal" data-target="#hangtonkho">Sửa</a>
               </td>
               
             </tr>
@@ -81,10 +81,11 @@
         </button>
       </div>
       <div class="modal-body">
-        
+          
           <div class="form-group">
             <label for="sm_name" class="col-form-label">Ngày nhập</label>
             <input type="text" class="form-control" id="sm_name" name="hotendem">
+            <input type="hidden" value="" name="id" id="id" >
           </div>
           <div class="form-group">
             <label for="name" class="col-form-label">Giá</label>
@@ -106,6 +107,16 @@
   </div>
 </div>
 
+
+
+
 <?php
   include_once 'footer_admin.php';
 ?>
+
+<script type="text/javascript">
+  $(document).on("click", ".open-modal", function () {
+     var myBookId = $(this).data('id');
+     $(".modal-body #id").val( myBookId );
+});
+</script>

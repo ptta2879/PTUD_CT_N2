@@ -82,12 +82,9 @@ class database {
 		
 		$ketqua = $link->prepare($sql);
 		// print_r($sql); die();
-		if($ketqua->execute()) {
-			return 1;
-		}
-		else {
-			return 0;
-		}
+		$ketqua->execute();
+		// print_r($ketqua); die();
+		return $link->lastInsertID();
 	}
 
 
