@@ -11,7 +11,7 @@
       </div>
 
       <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
-      <a class="btn btn-secondary btn-sm mb-4 " href="" role="button">Thêm sản phẩm mới</a>
+      <a class="btn btn-secondary btn-sm mb-4 " href="quanlisanpham/themsanpham" role="button">Thêm sản phẩm mới</a>
       <!-- <h2>Section title</h2> -->
       <div class="table-responsive">
       <table class="table">
