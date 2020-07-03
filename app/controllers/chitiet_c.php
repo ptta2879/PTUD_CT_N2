@@ -24,7 +24,10 @@
 				echo '<script type="text/javascript">window.location="trangchu"</script>';
 			}
 			$this->view->data=["soluongsp" => $soluongsp];
-			$this->view->render('productDetail','chitiet_v');
+		$this->view->render('productDetail','chitiet_v');
+			
 		}
+		
+		
 	}
 ?>

@@ -49,10 +49,18 @@
           </form>
         <!-- </div>
       </div> -->
-        <div class="xuong"> 
-          <a href="#" class="btn btn-outline-danger btn btn-block ">Mua ngay</a>
+        <div class="xuong">
+        <?php if(isset($_SESSION['username'])&&isset($_SESSION['password'])&&isset($_SESSION['phanquyen'])&&isset($_SESSION['hotendem'])&&isset($_SESSION['ten'])&&isset($_SESSION['sdt'])&&isset($_SESSION['diachi']))
+    {
+      echo '<a href="#" class="btn btn-outline-danger btn btn-block ">Mua ngay</a>
 
           <a href="#" class="btn btn-outline-primary btn btn-block ">Thêm vào giỏ hàng</a>
+         ';
+    }
+    else{
+      echo '<a href="dangnhap" class="btn btn-outline-warning btn btn-block ">Đăng nhập để mua hàng</a>';
+    }
+     ?> 
         </div>
       </div>
     </div>

@@ -46,10 +46,11 @@ class quanlihangtonkho_v
           <thead class="thead-light">
             <tr>
               <th scope="col">STT</th>
-              <th scope="col">Tên sản phẩm</th>             
+              <th scope="col">Tên sản phẩm</th>
+                         
               <th scope="col">Số lượng</th>
               <th scope="col">Thời gian</th> 
-              <th scope="col">Ngay nhap</th> 
+              <th scope="col">Ngày Nhập</th> 
             </tr>
           </thead>
           <tbody>
@@ -59,6 +60,7 @@ class quanlihangtonkho_v
 			$rows=$dulieu[$i];
 			echo '<th scope="row">'.$stt.'</th>
               <td>'.$rows['tensp'].'</td>
+
               <td>'.$rows['soluong'].'</td>
               <td>
                 '.$rows['thoigian'].'
