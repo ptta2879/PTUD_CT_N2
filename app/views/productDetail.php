@@ -20,7 +20,7 @@
         <div class="col-12 d-flex d-flex justify-content-start">
           <!-- <img class="mb-4" src="http://placehold.it/400x450" alt="Để hình ở chỗ này nè" > -->
           <span onclick="this.parentElement.style.display='none'" ></span>
-          <img id="expandedImg" src="<?php echo $dir.'1.jpg'; ?>" class="hinhct rounded">
+          <img id="expandedImg" src="<?php echo $dir.'1.jpg'; ?>" width="100%" height="400px" class="hinhct rounded">
           <!-- <div id="imgtext"></div> -->
         </div>
       </div>
@@ -39,9 +39,9 @@
       </div>
 
     </div>
-
+  
     <div class="col-lg-4 col-md-6">
-      <h3 class="h4 card-text text-danger font-weight-bold">67.000 VND</h3>
+      <h3 class="h4 card-text text-danger font-weight-bold"> <?php echo $this->data['gia'];?> VND</h3>
       <?php $this->page->soluong();?>
      <!--  <div class="row">
         <div class="col-12 mb-3"> -->
@@ -56,9 +56,10 @@
 
           </form>
           <?php foreach ($this->data['thuoctinh'] as $key => $value) {
-              echo $this->data['mota'][$key]."____".$value;
+              echo '<p class="text-secondary h5">'. $this->data['mota'][$key].": ".$value .'</p>'; 
               echo "<br>";
           }
+
           ?>
        <!-- </div>
       </div> -->
@@ -90,26 +91,14 @@
         </div>           
       </div> -->
     <div class="row mt-5">
-    <div class="col-8 mb-5 ">
+    <div class="col-12 mb-5 ">
       <h1 class="h3">Mô tả</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.</p>
-      <a href="#" class="text-dark">&laquo;Quay về trang chủ </a>
+      <a href="trangchu" class="text-dark">&laquo;Quay về trang chủ </a>
     </div>
 
-    <div class="col-4">
-      <h3>Mô Tả</h3>
-      <table class="table">
-       <tr>
-         <td>Màn hình:</td>
-         <td>TFT LCD,6.5",Full HD+</td>
-       </tr>
-       <tr>
-        <td>Hệ điều hành:</td>
-        <td>Android 10</td>
-       </tr>
-      </table>
-    </div>
+    
 
   </div>
 

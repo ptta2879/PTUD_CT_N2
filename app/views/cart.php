@@ -129,11 +129,69 @@
       </tbody>
       </table>
       <div class="d-flex flex-row-reverse">
-      <a href="#" class="btn btn-dark ">Thanh toán</a>
+      <button type="button" class="btn btn-secondary btn-sm mb-4" data-toggle="modal" data-target="#thanhtoan">Thanh Toán</button>
       </div>  
     </div>
   </div>
-
+<div class="modal fade" id="thanhtoan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Đơn Hàng</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Họ Và Tên Đệm</label><span class="ml-2 text-danger">* Bắt Buộc</span>
+                  <input type="text" name="hovatendem" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Tên</label><span class="ml-2 text-danger">* Bắt Buộc</span>
+                  <input type="text" name="hovatendem" class="form-control" id="recipient-name">
+                </div><div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Giá</label>
+                  <p class="text-danger h5">200000 VND</p>
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Số điện thoại</label><span class="ml-2 text-danger">* Bắt Buộc</span>
+                  <input type="text" name="sdtnhasx" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Địa chỉ</label><span class="ml-2 text-danger">* Bắt Buộc</span>
+                  <input type="text" name="diachinhasx" class="form-control" id="recipient-name">
+                </div>
+                  <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                  <label class="form-check-label" for="exampleRadios1">
+                    Thanh toán khi nhận hàng
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                  <label class="form-check-label" for="exampleRadios2">
+                    Thanh toán online
+                  </label><div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Số tài khoản ngân hàng</label><span class="ml-2 text-danger">* Bắt Buộc</span>
+                  <input type="text" name="diachinhasx" class="form-control" id="recipient-name">
+                  <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Tên chủ thẻ</label><span class="ml-2 text-danger">* Bắt Buộc</span>
+                  <input type="text" name="diachinhasx" class="form-control" id="recipient-name">
+                </div>
+                </div>
+                
+               
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Đóng</button>
+              <button type="submit" value="nutthem" name="nutthemnhasx" class="btn btn-success btn-sm">Xác nhận</button>
+            </div>
+                
+                
+                
+              
+            </div>
 </div>
 </main>
 

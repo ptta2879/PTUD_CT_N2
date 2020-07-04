@@ -46,8 +46,7 @@ class quanlihangtonkho_v
           <thead class="thead-light">
             <tr>
               <th scope="col">STT</th>
-              <th scope="col">Tên sản phẩm</th>
-                         
+              <th scope="col">Tên sản phẩm</th>           
               <th scope="col">Số lượng</th>
               <th scope="col">Thời gian</th> 
               <th scope="col">Ngày Nhập</th> 

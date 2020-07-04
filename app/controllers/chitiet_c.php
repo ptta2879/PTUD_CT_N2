@@ -32,7 +32,7 @@
 				// print_r($mota); die();
 				
 				$sp = $this->model->loaddulieu("SELECT tensp,gia$select FROM sanpham WHERE id = $idsp");
-				// print_r($sp); die();
+				// print_r($sp[0]); die();
 				$thuoctinh = [];
 				$def = ['tensp','gia'];
 				foreach ($sp[0] as $key => $value) {
@@ -40,7 +40,8 @@
 					$thuoctinh[$key] = $value;
 					}
 				}
-				// print_r($data);
+
+				// print_r($thuoctinh); die();
 				// die();
 				$chungloai = 'dienthoai';
 			}
@@ -53,8 +54,9 @@
 			//$data = ["chungloai" => $chungloai,"soluongsp" => $soluongsp[0]['soluong']];
 			
 			// print_r(array_merge($sp[0],$data)); die();
+			// print_r($sp[0]["gia"]); die();
 
-			$this->view->data=["idsp" => $idsp,"tensp" => $sp[0]['tensp'], "chungloai" => $chungloai,"soluongsp" => $soluongsp[0]['soluong'], "thuoctinh" => $thuoctinh, "mota" => $mota];
+			$this->view->data=["idsp" => $idsp,"tensp" => $sp[0]['tensp'],"gia" => $sp[0]["gia"], "chungloai" => $chungloai,"soluongsp" => $soluongsp[0]['soluong'], "thuoctinh" => $thuoctinh, "mota" => $mota];
 			
 			$this->view->render('productDetail','chitiet_v');
 

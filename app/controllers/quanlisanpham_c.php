@@ -16,14 +16,15 @@
 				
 				$column_names = $values = '';
 				foreach ($_REQUEST as $key => $value) {
-					if($key != 'soluong') {
+					if($key != 'soluong' && $key != 'tennhasx') {
 						$column_names .= ','.$key;
 						$values .= ",'".$value."'";
 					}
 				}
 			
 				$idkho = $this->model->themxoasua("INSERT INTO khohang(soluong) VALUE($soluong)");
-				$idsp = $this->model->themxoasua("INSERT INTO sanpham(idnhasx,idchungloai,soluongban,mota,idkho$column_names) VALUES(1,1,0,'',$idkho$values)");
+				// echo "INSERT INTO sanpham(idnhasx,idchungloai,soluongban,mota,idkho$column_names) VALUES(1,1,0,'sađá',$idkho$values)"; die();
+				$idsp = $this->model->themxoasua("INSERT INTO sanpham(idnhasx,idchungloai,soluongban,mota,idkho$column_names) VALUES(1,1,0,'asdads',$idkho$values)");
 
 
 				$chungloai = 'dienthoai';
