@@ -7,7 +7,8 @@
   $tensp = $this->data['tensp'];
   $idsp = $this->data['idsp'];
   $chungloai = $this->data['chungloai'];
-  $dir = 'app/views/assets/img/sanpham/'.$chungloai.'/'.$tensp.'_mota_'.$idsp.'_';
+  // print_r($chungloai); die();
+  $dir = $chungloai[0]['folder'].'/'.$tensp.'_mota_'.$idsp.'_';
 
 ?>
 
@@ -41,7 +42,7 @@
     </div>
 
     <div class="col-lg-4 col-md-6">
-      <h3 class="h4 card-text text-danger font-weight-bold">67.000 VND</h3>
+      <h3 class="h4 card-text text-danger font-weight-bold"><?php echo $this->data['gia'] ?> VND</h3>
       <?php $this->page->soluong();?>
      <!--  <div class="row">
         <div class="col-12 mb-3"> -->
@@ -56,8 +57,8 @@
 
           </form>
           <?php foreach ($this->data['thuoctinh'] as $key => $value) {
-              echo $this->data['mota'][$key]."____".$value;
-              echo "<br>";
+              echo '<span class="text-secondary">'.$this->data['mota'][$key].'</span>';
+              echo '<span class="ml-4 font-weight-bold text-secondary">'.$value.'</span><br>';
           }
           ?>
        <!-- </div>

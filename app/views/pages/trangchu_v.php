@@ -81,23 +81,46 @@ class trangchu_v
 	function tatcasp()
 	{
 		$dulieu = $this->data["tatcasp"];
-		$danhmuc = 'dienthoai';
-		for($i=0;$i<count($dulieu);$i++)
-		{
-			$row=$dulieu[$i];
+		// print_r($dulieu); die();
+		$chungloai = $this->data["chungloai"];
+		$link = $chungloai[0]['folder'].'/';
+		// print_r($this->data["tatcasp"]); die();
+		foreach ($dulieu as $value) {
+			// print_r($value['id']); die();
 			echo '<div class="col-lg-3 col-md-6">
-      <a href="chitiet?sanpham='.$row['id'].'">
+      <a href="chitiet?sanpham='.$value['id'].'">
        <figure class="figure">
-        <img src="'.DIR_APP.'views/assets/img/sanpham/'.$danhmuc.'/'.$row['tensp'].'_hinhdaidien_'.$row['id'].'.jpg" width="300" height="285" class="figure-img img-fluid hinh" alt="Figure image">
-        <figcaption class="figure-caption">
- <p class="h6 mb-0 font-weight-bold text-dark text-center">'.$row['tensp'].'</p>
-          <p class="h6 font-weight-normal mb-0 text-danger text-center">'.$row['gia'].' VNĐ</p>
+        <img src="'.$link.$value['tensp'].'_hinhdaidien_'.$value['id'].'.jpg" width="300" height="285" class="figure-img img-fluid hinh" alt="Figure image">
+        <figcaption class="figure-caption">';
+        foreach ($value as $key => $val) {
+        	if($key != 'id') {
+        		echo '<p class="h6 font-weight-normal mb-0 text-secondary text-center">'.$val.'</p>';
+        	}
+        }
+        echo '
                   </figcaption>
       </figure>
       </a>
     </div>';
 		}
+
+	// 	for($i=0;$i<count($dulieu);$i++)
+	// 	{
+	// 		$row=$dulieu[$i];
+	// 		echo '<div class="col-lg-3 col-md-6">
+ //      <a href="chitiet?sanpham='.$row['id'].'">
+ //       <figure class="figure">
+ //        <img src="'.$link.$row['tensp'].'_hinhdaidien_'.$row['id'].'.jpg" width="300" height="285" class="figure-img img-fluid hinh" alt="Figure image">
+ //        <figcaption class="figure-caption">
+ // <p class="h6 mb-0 font-weight-bold text-dark text-center">'.$row['tensp'].'</p>
+ //          <p class="h6 font-weight-normal mb-0 text-danger text-center">'.$row['gia'].' VNĐ</p>
+ //                  </figcaption>
+ //      </figure>
+ //      </a>
+ //    </div>';
+	// 	}
 	}
+
 	function phantrang()
 	{
 		$dulieu = $this->data['totalpages'];

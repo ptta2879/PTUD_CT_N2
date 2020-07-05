@@ -8,6 +8,7 @@
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Thêm sản phẩm mới</h1>
+        <?php if(isset($this->message)) {echo $this->message;}  ?>
       </div>
 
       <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
@@ -38,9 +39,14 @@
         <div class="form-group row d-flex justify-content-center">
           <label for="exampleFormControlSelect1"  class="col-sm-2 col-form-label">Nhà sản xuất</label>
           <div class="col-sm-3">
-          <select class="form-control form-control-sm" id="exampleFormControlSelect1" name="tennhasx">
-            <option value="Apple">Apple</option>
-            <option value="Samsung">Samsung</option>
+          <select class="form-control form-control-sm" id="exampleFormControlSelect1" name="idnhasx">
+            <?php foreach ($this->nhasanxuat as $variable) {
+              
+                echo '<option value="'.$variable['id'].'">'.$variable['tennhasanxuat'].'</option>';
+              
+            } ?>
+            <!-- <option value="Apple">Apple</option>
+            <option value="Samsung">Samsung</option> -->
             <!-- <option>3</option>
             <option>4</option>
             <option>5</option> -->
@@ -61,12 +67,14 @@
         </div>
 
         <?php
+
+         
           foreach ($this->data as $val) {
-            if($val['kieudulieu'] == 'varchar(255)') { $val['kieudulieu'] = 'text';}
+            // if($val['kieudulieu'] == 'varchar(255)')
             echo '<div class="form-group row d-flex justify-content-center">
           <label for="'.$val['id'].'" class="col-sm-2 col-form-label">'.$val['mota'].'</label>
           <div class="col-sm-3">
-            <input type="'.$val['kieudulieu'].'" class="form-control" id="'.$val['id'].'" name="'.$val['tenthuoctinh'].'">
+            <input type="text" class="form-control" id="'.$val['id'].'" name="'.$val['tenthuoctinh'].'">
           </div>
         </div>';
           }

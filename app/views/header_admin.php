@@ -94,6 +94,12 @@
           Quản lí tài khoản nhân viên
         </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link <?php echo $this->active == 'quanli_chungloai'  ? 'active':''  ?>" href="<?php echo DIR ?>quanlichungloai">
+          <span><i class="fas fa-layer-group"></i></span>
+          Quản lí chủng loại
+        </a>
+      </li>
     </ul>
 
   </div>

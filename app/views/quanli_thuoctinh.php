@@ -61,25 +61,110 @@
       </div> -->
 
 
-    <form method="post">
+    
+      
+      <div class="table-responsive mb-5">
+      
+        <table class="table table-sm table-hover">
+          <h1 class="h4">Quản lí thuộc tính trang chi tiết</h1>
+          <thead>
+            <tr class="table-secondary">
+              <th scope="col">STT</th>
+              <th scope="col">Tên</th>
+              <th scope="col">Vị trí
+              </th>
+              <th scope="col">Trạng thái</th>
+              <th scope="col">Xác nhận</th>
+            </tr>
+          </thead>
+          <tbody >
+            <?php 
+
+      $stt = 0;
+      foreach ($this->data as $variable) {
+        // print_r($variable); die();
+        $stt +=1;
+        $checked = '';
+        if($variable['trangthai'] == 1){
+          $checked = 'checked';
+         }
+         echo '<tr>
+            <form method="post">
+            <th class="align-middle" scope="row">'.$stt.'</th>
+            <td class="align-middle" width="20%">'.$variable['mota'].'</td>
+            <td class="align-middle">
+            <div class="input-group m-1" style="width: 60%;">
+                  <select  class="custom-select" id="inputGroupSelect03" name="vitri">
+            ';
+        // if($checked) {
+          for ($i=0 ; $i<=5; $i++) {
+                    // $val = $i.'_'.$variable['id'];
+                    // print_r($val); die();
+                    if($variable['vitri'] == $i) {
+                      echo '<option value="'.$variable['vitri'].'" selected>'.$variable['vitri'].'</option>';
+                    } else {
+                      echo '<option value="'.$i.'" >'.$i.'</option>';
+                    }
+                  }
+        // }  
+
+
+        echo'</select>
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary btn-sm" type="button">Chọn</button>
+                </div>
+              </div>
+            </td>
+            <td class="align-middle">
+              <div class="custom-control custom-switch">
+                <input type="hidden" name="id" value="'.$variable['id'].'">
+                <input type="hidden" name="check_list" value="0">
+                <input type="checkbox" '.$checked.' class="custom-control-input" id="'.$variable['id'].'" value="1" name="check_list">
+                <label class="custom-control-label" for="'.$variable['id'].'">Xác nhận</label>
+              </div>
+            </td>
+            <td class="align-middle">
+              
+                <input type="submit" class="btn btn-sm btn-secondary" name="submit" value="Cập nhật">
+             
+            </td>
+            
+          </tr>
+          </form>';
+        
+         
+      }
+
+       ?>    
+          </tbody>
+
+        </table>
+        
+      </div>
+     
+
+
+
+      
       
       <div class="table-responsive">
-
-        <table class="table table-striped table-sm ">
+      
+        <table class="table table-hover table-sm ">
+          <h1 class="h4">Quản lí thuộc tính trang chủ</h1>
           <thead>
-            <tr >
+            <tr class="table-secondary">
               <th scope="col">STT</th>
               <th scope="col">Tên</th>
               <th scope="col">Vị trí</th>
               <th scope="col">Trạng thái</th>
-              <!-- <th scope="col">Xác nhận</th> -->
+              <th scope="col">Xác nhận</th>
             </tr>
           </thead>
           <tbody >
             <?php 
       $stt = 0;
 
-      foreach ($this->data as $variable) {
+      foreach ($this->thuoctinhhome as $variable) {
         // print_r($variable); die();
         $stt += 1;
         $checked = '';
@@ -87,18 +172,49 @@
           $checked = 'checked';
          }
          echo '<tr>
-            
-            <th scope="row">'.$stt.'</th>
-            <td class="align-self-center">'.$variable['mota'].'</td>
-            <td>'.$variable['vitri'].'</td>
-            <td>
+            <form method="post">
+            <th class="align-middle" scope="row">'.$stt.'</th>
+            <td class="align-middle" style="width: 20%;">'.$variable['mota'].'</td>
+            <td class="align-middle">
+            <div class="input-group m-1 " style="width: 60%;">
+                  <select  class="custom-select" id="inputGroupSelect03" name="vitrihome">';
+
+            // if($checked) {
+                  for ($i=0 ; $i<=2; $i++) {
+                    if($variable['vitri'] == $i) {
+                      echo '<option value="'.$variable['vitri'].'" selected>'.$variable['vitri'].'</option>';
+                    } else {
+                      echo '<option value="'.$i.'" >'.$i.'</option>';
+                    }
+                  }
+            // }
+            echo '
+                  </select>
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary btn-sm" type="button">Chọn</button>
+                  </div>
+                 
+                </div>
+
+            </td>
+            <td class="align-middle">
               <div class="custom-control custom-switch">
-                <input type="checkbox" '.$checked.' class="custom-control-input" id="'.$variable['id'].'" value="'.$variable['id'].'" name="check_list[]">
+                <input type="hidden" name="id" value="'.$variable['id'].'">
+                <input type="hidden" name="check" value="0" id="testNameHidden">
+                <input type="checkbox" '.$checked.' class="custom-control-input" id="'.$variable['id'].'" value="1" name="check" id="testName">
+                
+                
                 <label class="custom-control-label" for="'.$variable['id'].'">Xác nhận</label>
               </div>
             </td>
+            <td class="align-middle">
+             <div class="d-flex justify-align-center ">
+          <input type="submit" class="btn btn-sm btn-secondary" name="thuoctinhhome" value="Cập nhật">
+          </div>
+
+            </td>
             
-            
+           </form>
           </tr>';
         
          
@@ -108,11 +224,11 @@
           </tbody>
 
         </table>
-        <div class="d-flex justify-content-end">
-          <input type="submit" class="btn btn-sm btn-secondary" name="submit" value="Cập nhật">
-          </div>
+       <!--  <div class="d-flex justify-content-end mb-5">
+          <input type="submit" class="btn btn-sm btn-secondary" name="thuoctinhhome" value="Cập nhật">
+          </div> -->
       </div>
-      </form>
+      
     </main>
   </div>
 </div>
@@ -121,3 +237,12 @@
 <?php
   include_once 'footer_admin.php';
 ?>
+<!-- <script type="text/javascript">
+  if(document.getElementById("testName").checked) {
+    document.getElementById('testNameHidden').disabled = true;
+}
+
+// <input type="checkbox" '.$checked.' class="custom-control-input" id="'.$variable['id'].'" value="1" name="check[]" id="testName">
+// <input type="hidden" name="check[]" value="0" id="testNameHidden">
+</script> -->
+<!-- <input type="hidden" name="checkboxName[]" value="0"><input type="checkbox" onclick="this.previousElementSibling.value=1-this.previousElementSibling.value"> -->

@@ -10,7 +10,7 @@ define("DIR_ROOT", '/');
 define("DIR_APP", DIR_ROOT. 'app/');
 define("DIR_LIB", DIR_ROOT. 'lib/');
 
-
+define("LINK", './app/views/assets/img/sanpham/');
 
 // Định nghĩa thông số Database
 	define('DB_HOST', 'localhost');

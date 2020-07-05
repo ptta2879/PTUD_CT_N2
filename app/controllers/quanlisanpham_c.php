@@ -7,6 +7,9 @@
 
 		public function themsanpham(){
 			$this->view->data = $this->model->loaddulieu("SELECT * FROM `thuoctinh` where trangthai = 1");
+			$chungloai = $this->model->loaddulieu("SELECT id,folder FROM chungloai WHERE trangthai =1");
+				// print_r($chungloai); die();
+			$idchungloai = $chungloai[0]['id'];
 
 			if(isset($_REQUEST['themsanpham'])) {
 				
@@ -23,18 +26,20 @@
 				}
 			
 				$idkho = $this->model->themxoasua("INSERT INTO khohang(soluong) VALUE($soluong)");
-				$idsp = $this->model->themxoasua("INSERT INTO sanpham(idnhasx,idchungloai,soluongban,mota,idkho$column_names) VALUES(1,1,0,'',$idkho$values)");
+				// echo "INSERT INTO sanpham(idchungloai,idkho$column_names) VALUES($idchungloai,$idkho$values)"; die();
+				$idsp = $this->model->themxoasua("INSERT INTO sanpham(idchungloai,idkho$column_names) VALUES($idchungloai,$idkho$values)");
 
 
-				$chungloai = 'dienthoai';
-				$targetDir = "./app/views/assets/img/sanpham/".$chungloai."/";
+				
+				$targetDir = $chungloai[0]['folder']."/";
 				$allowTypes = array('jpg','png','jpeg');
 				$stt = 0;
+				$success = 0;
 				// $idsp = 1;
 				$tensp = $_REQUEST['tensp'];
 
 				// print_r($_FILES); die();
-				if(!empty($_FILES['hinhdaidien']['name'])) {
+				if(!empty($_FILES['hinhdaidien']['name']) && $idsp > 0) {
 					$fileName = $_FILES['hinhdaidien']['name'];
 		            $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
 		            $name = $tensp.'_hinhdaidien_'.$idsp.'.'.$fileType;
@@ -43,6 +48,7 @@
 			 
 		            if(in_array($fileType, $allowTypes)){ 
 		                if(move_uploaded_file($_FILES["hinhdaidien"]["tmp_name"], $targetFilePath)) {
+		                	$success+=1;
 		            	}
 		        	}
 				}
@@ -51,7 +57,7 @@
 			//     // $statusMsg = $errorMsg = $insertValuesSQL = $errorUpload = $errorUploadType = ''; 
 			    $fileNames = array_filter($_FILES['files']['name']);
 			    // print_r($fileNames); die();
-			    if(!empty($fileNames)){ 
+			    if(!empty($fileNames) && $idsp > 0){ 
 			        foreach($_FILES['files']['name'] as $key=>$val){ 
 			//             // File upload path 
 			        	$stt+=1;
@@ -70,6 +76,7 @@
 			            if(in_array($fileType, $allowTypes)){ 
 			                // Upload file to server 
 			                if(move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetFilePath1)){ 
+			                	$success+=1;
 			//                     // Image db insert sql 
 			//                     $insertValuesSQL .= "('".$fileName."', NOW()),"; 
 			//                 }else{ 
@@ -81,10 +88,15 @@
 			        }
 			        }
 				}
-				$this->view->message = 'them san pham thanh cong';
+				if($success == 2){ 
+					$this->view->message =  '<div class="alert alert-success" role="alert">Thêm sản phẩm '.$tensp.' thành công</div>';
+				}
 				// die();
 			}
+			$result = $this->model->loaddulieu("SELECT id,tennhasanxuat FROM nhasanxuat WHERE idchungloai =$idchungloai");
+			// print_r($result); die();
 
+			$this->view->nhasanxuat = $result;
 		$this->view->render('themsp');
 		}
 
