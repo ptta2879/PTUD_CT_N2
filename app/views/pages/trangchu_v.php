@@ -4,6 +4,7 @@ class trangchu_v
 	function tintuc()
 	{
 		$dulieu = $this->data["slide"];
+		$danhmuc = 'dienthoai';
 		for ($i=0;$i<count($dulieu);$i++)
 		{
 			$row = $dulieu[$i];
@@ -29,6 +30,7 @@ class trangchu_v
 	function danhmuc()
 	{
 		$dulieu = $this->data["danhmuc"];
+
 		for ($i=0; $i < count($dulieu) ; $i++) { 
 			$row = $dulieu[$i];
 			echo '<a style="text-decoration: none" href="?hang='.$row['id'].'" >
@@ -39,6 +41,7 @@ class trangchu_v
 	function sanphammoi()
 	{
 		$dulieu = $this->data["sanphammoi"];
+		$danhmuc = 'dienthoai';
 		for($i=0;$i<count($dulieu);$i++)
 		{
 			$row=$dulieu[$i];
@@ -46,7 +49,7 @@ class trangchu_v
 			<div class="col-lg-3 col-md-6">
       <a href="chitiet?sanpham='.$row['id'].'">
 			<figure class="figure">
-        <img src="'.DIR_APP.'views/assets/img/sanpham/sanpham-dh-'.$row['id'].'.PNG" width="300" height="285" class="figure-img img-fluid hinh" alt="Figure image">
+        <img src="'.DIR_APP.'views/assets/img/sanpham/'.$danhmuc.'/'.$row['tensp'].'_hinhdaidien_'.$row['id'].'.jpg" width="300" height="285" class="figure-img img-fluid hinh" alt="Figure image">
         <figcaption class="figure-caption">
           <p class="h6 mb-0 font-weight-bold text-dark text-center">'.$row['tensp'].'</p>
           <p class="h6 font-weight-normal mb-0 text-danger text-center">'.$row['gia'].' VNĐ</p>
@@ -62,13 +65,14 @@ class trangchu_v
 	function sanphambanchay()
 	{
 		$dulieu = $this->data["sanphambanchay"];
+		$danhmuc = 'dienthoai';
 		for($i=0;$i<count($dulieu);$i++)
 		{
 			$row=$dulieu[$i];
 			echo '<div class="col-lg-3 col-md-6">
       <a href="chitiet?sanpham='.$row['id'].'">
        <figure class="figure">
-        <img src="'.DIR_APP.'views/assets/img/sanpham/sanpham-dh-'.$row['id'].'.PNG" width="300" height="285" class="figure-img img-fluid hinh" alt="Figure image">
+        <img src="'.DIR_APP.'views/assets/img/sanpham/'.$danhmuc.'/'.$row['tensp'].'_hinhdaidien_'.$row['id'].'.jpg" width="300" height="285" class="figure-img img-fluid hinh" alt="Figure image">
         <figcaption class="figure-caption">
  <p class="h6 mb-0 font-weight-bold text-dark text-center">'.$row['tensp'].'</p>
           <p class="h6 font-weight-normal mb-0 text-danger text-center">'.$row['gia'].' VNĐ</p>

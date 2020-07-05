@@ -26,6 +26,9 @@ class chitiet_v
 			echo '<h3 class="card-text text-danger font-weight-bold">Hết Hàng</h3>';
 		}
 		
+			
+		
+		
 
 	}
 } ?>

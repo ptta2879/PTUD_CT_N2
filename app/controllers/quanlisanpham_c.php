@@ -19,7 +19,7 @@
 				
 				$column_names = $values = '';
 				foreach ($_REQUEST as $key => $value) {
-					if($key != 'soluong') {
+					if($key != 'soluong' && $key != 'tennhasx') {
 						$column_names .= ','.$key;
 						$values .= ",'".$value."'";
 					}
