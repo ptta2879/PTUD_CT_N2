@@ -19,6 +19,7 @@ class dangnhap extends Controller
 				for($a=0;$a<$i;$a++)
 				{
 					$row=$thongbao[$a];
+					$id=$row['id'];
 					$username=$row['username'];
 					$password=$row['password'];
 					$hotendem=$row['hotendem'];
@@ -28,7 +29,7 @@ class dangnhap extends Controller
 					$diachi = $row['diachi'];
 
 					//session//
-
+					$_SESSION['id'] = $id;
 					$_SESSION['username']=$username;
 					$_SESSION['password']=$password;
 					$_SESSION['hotendem']=$hotendem;

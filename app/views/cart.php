@@ -15,7 +15,6 @@
           <thead class="thead-dark">
             <tr>
               <th scope="col">STT</th>
-              <th scope="col">Chọn</th>
               <th scope="col">Hình</th>
               <th scope="col">Tên</th>
               <th scope="col">Số lượng</th>
@@ -25,14 +24,37 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <?php 
+              $stt = 0;
+              $tong = 0;
+              foreach ($this->data as $value) {
+                $stt+=1;
+                $tong += $value['soluong']*$value['gia'];
+
+                echo '<tr><th scope="row">'.$stt.'</th>';
+                echo '<td>English</td>';
+                echo '<td>'.$value['tensp'].'</td>';
+                echo '<td>
+                      <select class="custom-select" id="inlineFormCustomSelectPref">
+                      <option selected>'.$value['soluong'].'</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      </select>
+                      </td>';
+                echo '<td>'.$value['soluong']*$value['gia'].'</td>';
+                echo '<td>
+                      <a href="#" class="btn btn-sm btn-secondary ">Cập nhật</a>
+                    </td>
+                    <td>
+                      <a href="#" class="btn btn-sm btn-secondary ">Xóa</a>
+                    </td>
+                    </tr>';
+            }
+             ?>
+            <!-- <tr>
+
               <th scope="row">1</th>
-              <td>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1">
-                  <label class="custom-control-label" for="customCheck1"></label>
-                </div>              
-              </td>
               <td>England</td>
               <td>English</td>
               <td>
@@ -50,34 +72,9 @@
               <td>
                 <a href="#" class="btn btn-sm btn-secondary ">Xóa</a>
               </td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck2">
-                  <label class="custom-control-label" for="customCheck2"></label>
-                </div>              
-              </td>
-              <td>France</td>
-              <td>French</td>
-              <td>
-                <select class="custom-select" id="inlineFormCustomSelectPref">
-                <option selected>1</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-              </td>
-              <td>England</td>
-              <td>
-                <a href="#" class="btn btn-sm btn-secondary ">Cập nhật</a>
-              </td>
-              <td>
-                <a href="#" class="btn btn-sm btn-secondary ">Xóa</a>
-              </td>
-            </tr>
-            <tr>
+            </tr> -->
+           
+            <!-- <tr>
               <th scope="row">3</th>
               <td>
                 <div class="custom-control custom-checkbox">
@@ -102,7 +99,7 @@
               <td>
                 <a href="#" class="btn btn-sm btn-secondary ">Xóa</a>
               </td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
     </div>
@@ -110,14 +107,14 @@
 
   <div class="row">
     <div class="col-6 ml-auto mt-5 mb-5">
-      <h1 class="h3 font-weight-normal text-dark">Tổng số hàng đã chọn</h1>
+      <h1 class="h4 font-weight-normal text-dark">Tổng tiền số hàng trong giỏ</h1>
       <table class="table table-bordered">
       <tbody>
         <tr>
-          <th scope="row">Tổng</th>
-          <td>100</td>
+          <th scope="row">Tổng tiền</th>
+          <td><?php echo $tong ?></td>
         </tr>
-        <tr>
+      <!--   <tr>
           <th scope="row">VAT</th>
           <td>10</td>
           
@@ -125,7 +122,7 @@
         <tr>
           <th scope="row">Tổng tiền</th>
           <td>110</td>
-        </tr>
+        </tr> -->
       </tbody>
       </table>
       <div class="d-flex flex-row-reverse">
