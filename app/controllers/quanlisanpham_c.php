@@ -6,6 +6,20 @@
 			// print_r($chungloai); die();
 			$idchungloai = $chungloai[0]['id'];
 
+			
+
+
+			if(isset($_REQUEST['xoa'])) {
+				$idsp = $_REQUEST['idsp'];
+				// print_r($idsp); die();
+				// $tensanpham = $this->model->loaddulieu("SELECT tensp FROM sanpham WHERE id = $idsp");
+				// print_r($tensanpham); die();
+				// $tensp = $tensanpham[0]['tensp'];
+				$this->model->themxoasua("DELETE FROM sanpham WHERE id = $idsp");
+				// $this->view->message = '<div class="alert alert-success" role="alert">Đã xóa sản phẩm '.$tensp.' </div>';
+			}
+
+
 			$sanpham = $this->model->loaddulieu("SELECT * FROM sanpham WHERE idchungloai = $idchungloai");
 			// print_r($sanpham); die();
 			$soluong = [];
@@ -13,9 +27,6 @@
 				$id = $value['idkho'];
 				$soluong[$id] = $this->model->loaddulieu("SELECT soluong FROM khohang WHERE id = $id");
 			}
-
-
-
 
 
 
@@ -117,11 +128,126 @@
 
 			$idsp = $_REQUEST['idsp'];
 
-			$sanpham = $this->modal->loaddulieu("SELECT * FROM sanpham WHERE id = $idsp");
+			$thuoctinh = $this->model->loaddulieu("SELECT tenthuoctinh FROM thuoctinh WHERE trangthai = 1");
+			$select = '';
+			// print_r($thuoctinh); die();
+			foreach ($thuoctinh as  $value) {
+				if($value['tenthuoctinh'] != 'mota') {
+					$select .= ','.$value['tenthuoctinh'];
+				}
+			}
 
+			// print_r($select); die();
+			$select = substr($select, 1);
+			// echo "SELECT $select,tensp,gia,mota,idkho,idnhasx,idchungloai FROM sanpham WHERE id = $idsp";
+			$sanpham = $this->model->loaddulieu("SELECT $select,tensp,gia,mota,idkho,idnhasx,idchungloai FROM sanpham WHERE id = $idsp");
+
+			// print_r($sanpham); die();
+			$idchungloai = $sanpham[0]['idchungloai'];
+			$idkho = $sanpham[0]['idkho'];
+			// $soluong = $this->model->loaddulieu("SELECT soluong FROM khohang WHERE id= $idkho");
+
+			// $nhasanxuat = $this->model->loaddulieu("SELECT id,tennhasanxuat FROM nhasanxuat WHERE idchungloai  = $idchungloai");
+
+			// $this->view->soluong = $soluong[0]['soluong'];
+			// $this->view->data = $this->model->loaddulieu("SELECT * FROM `thuoctinh` where trangthai = 1");
+			// $this->view->nhasanxuat = $nhasanxuat;
+			// $this->view->sanpham = $sanpham[0];
+
+
+			if(isset($_REQUEST['suasanpham'])) {
+				
+				
 			
+				$_REQUEST = array_slice($_REQUEST,1,count($_REQUEST) -2);
 
-			print_r($idsp); die();
+				// print_r($_REQUEST); die();
+				
+				// $column_names = $values = '';
+				foreach ($_REQUEST as $key => $value) {
+					if(!empty($value) && $key != 'idsp' && $key != 'soluong'){
+						// echo "UPDATE sanpham SET $key = '$value' WHERE id = $idsp";
+						$this->model->themxoasua("UPDATE sanpham SET $key = '$value' WHERE id = $idsp");
+					}
+				}
+				// die();
+				if(isset($_REQUEST['soluong'])) {
+					$soluong = $_REQUEST['soluong'];
+					$this->model->themxoasua("UPDATE khohang SET soluong = $soluong WHERE id = $idkho");
+				}
+				// echo "INSERT INTO sanpham(idchungloai,idkho$column_names) VALUES($idchungloai,$idkho$values)"; die();
+				
+
+
+				
+				// $targetDir = $chungloai[0]['folder']."/";
+				$targetDir = LINK;
+				// $allowTypes = array('jpg','png','jpeg');
+				$allowTypes = array('png');
+				$stt = 0;
+				$success = 0;
+				// $idsp = 1;
+				$tensp = $_REQUEST['tensp'];
+
+				// print_r($_FILES); die();
+				if(!empty($_FILES['hinhdaidien']['name']) && $idsp > 0) {
+					$fileName = $_FILES['hinhdaidien']['name'];
+		            $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
+		            $name = $idsp.'_hinhdaidien_.'.$fileType;
+
+		            $targetFilePath = $targetDir . $name; 
+			 		// print_r($targetFilePath); die();
+		            if(in_array($fileType, $allowTypes)){ 
+		                if(move_uploaded_file($_FILES["hinhdaidien"]["tmp_name"], $targetFilePath)) {
+		                	$success+=1;
+		            	}
+		        	}
+				}
+
+			    $fileNames = array_filter($_FILES['files']['name']);
+			    // print_r($fileNames); die();
+			    if(!empty($fileNames) && $idsp > 0){ 
+			        foreach($_FILES['files']['name'] as $key=>$val){ 
+
+			        	$stt+=1;
+			            // $fileName = basename($_FILES['files']['name'][$key]);
+			            $fileName = $_FILES['files']['name'][$key];
+			            $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
+			            $name = $idsp.'_'.$stt.'_mota_.'.$fileType;
+
+			            // $targetFilePath = $targetDir . $fileName; 
+			            $targetFilePath1 = $targetDir . $name; 
+			          
+			            if(in_array($fileType, $allowTypes)){ 
+			                // Upload file to server 
+			                if(move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetFilePath1)){ 
+			                	$success+=1;
+			                	// print_r($success); die();
+			            }
+			        }
+			        }
+				}
+				// if($success == 2){ 
+				// 	$this->view->message =  '<div class="alert alert-success" role="alert">Sửa sản phẩm '.$tensp.' thành công</div>';
+				// }
+				$this->view->message =  '<div class="alert alert-success" role="alert">Sửa sản phẩm '.$tensp.' thành công</div>';
+				// die();
+			}
+			$sanpham = $this->model->loaddulieu("SELECT $select,tensp,gia,mota,idkho,idnhasx,idchungloai FROM sanpham WHERE id = $idsp");
+
+			$soluong = $this->model->loaddulieu("SELECT soluong FROM khohang WHERE id= $idkho");
+
+			$nhasanxuat = $this->model->loaddulieu("SELECT id,tennhasanxuat FROM nhasanxuat WHERE idchungloai  = $idchungloai");
+
+			$this->view->soluong = $soluong[0]['soluong'];
+			$this->view->data = $this->model->loaddulieu("SELECT * FROM `thuoctinh` where trangthai = 1");
+			$this->view->nhasanxuat = $nhasanxuat;
+			$this->view->sanpham = $sanpham[0];
+
+			$this->view->render('suasanpham');
+
+
+			// print_r($nhasanxuat); die();
 		}
 
 	}
