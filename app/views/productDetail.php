@@ -6,9 +6,9 @@
 <?php 
   $tensp = $this->data['tensp'];
   $idsp = $this->data['idsp'];
-  $chungloai = $this->data['chungloai'];
+  // $chungloai = $this->data['chungloai'];
   // print_r($chungloai); die();
-  $dir = $chungloai[0]['folder'].'/'.$tensp.'_mota_'.$idsp.'_';
+  $dir = LINK.$idsp.'_';
 
 ?>
 
@@ -21,7 +21,7 @@
         <div class="col-12 d-flex d-flex justify-content-start">
           <!-- <img class="mb-4" src="http://placehold.it/400x450" alt="Để hình ở chỗ này nè" > -->
           <span onclick="this.parentElement.style.display='none'" ></span>
-          <img id="expandedImg" src="<?php echo $dir.'1.jpg'; ?>" width="100%" height="400px" class="hinhct rounded">
+          <img id="expandedImg" src="<?php echo $dir.'1_mota.jpg'; ?>" width="100%" height="400px" class="hinhct rounded">
           <!-- <div id="imgtext"></div> -->
         </div>
       </div>
@@ -59,8 +59,10 @@
 
           <div>
           <?php foreach ($this->data['thuoctinh'] as $key => $value) {
+            if($this->data['mota'][$key] != 'Mô tả'){
               echo '<span class="text-secondary">'.$this->data['mota'][$key].'</span>';
               echo '<span class="ml-4 font-weight-bold text-secondary">'.$value.'</span><br>';
+            }
           }
 
           ?>
@@ -70,7 +72,7 @@
         <div class="xuong">
         <?php if(isset($_SESSION['username'])&&isset($_SESSION['password'])&&isset($_SESSION['phanquyen'])&&isset($_SESSION['hotendem'])&&isset($_SESSION['ten'])&&isset($_SESSION['sdt'])&&isset($_SESSION['diachi']))
     {
-      echo '<a href="#" class="btn btn-outline-danger btn-block ">Mua ngay</a>
+      echo '
 
               <button type="submit" class="btn btn-outline-primary btn-block" name="themvaogio">Thêm vào giỏ</button>
           
@@ -99,9 +101,13 @@
       </div> -->
     <div class="row mt-5">
     <div class="col-12 mb-5 ">
-      <h1 class="h3">Mô tả</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni soluta, odio, obcaecati pariatur numquam eius voluptatem, explicabo, magnam nostrum possimus veritatis laboriosam aspernatur aperiam corporis molestias beatae sint harum facere.</p>
+      <?php if(isset($this->data['thuoctinh']['mota'])) { 
+        echo '<h1 class="h3">Mô tả</h1>';
+        echo '<p>'.$this->data['thuoctinh']['mota'].'</p>';
+
+        } 
+      ?>
+     
       <a href="trangchu" class="text-dark">&laquo;Quay về trang chủ </a>
     </div>
 

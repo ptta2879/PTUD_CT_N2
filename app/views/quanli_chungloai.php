@@ -7,7 +7,7 @@
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Quản lí thuộc tính</h1>
-        <?php if(isset($this->message)) { echo $this->message; }?>
+        
         <!-- <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group mr-2">
             <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
@@ -26,7 +26,7 @@
        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
-          <form method="post">
+          <form method="post" name="themchungloai">
             <div class="modal-body">
               
                 <div class="form-group">
@@ -50,17 +50,17 @@
       </div> -->
 
 
-    <form method="post">
+    
       
       <div class="table-responsive">
-
+        <?php if(isset($this->message)) { echo $this->message; }  ?>
         <table class="table table-striped table-sm ">
           <thead>
             <tr >
               <th scope="col">STT</th>
               <th scope="col">Tên</th>
               <th scope="col">Trạng thái</th>
-              <!-- <th scope="col">Xác nhận</th> -->
+              <th scope="col">Cập nhật</th>
             </tr>
           </thead>
           <tbody >
@@ -75,17 +75,22 @@
           $checked = 'checked';
          }
          echo '<tr>
-            
+            <form method="post">
             <th scope="row">'.$stt.'</th>
             <td class="align-self-center">'.$variable['ten'].'</td>
             <td>
               <div class="custom-control custom-switch">
-                <input type="checkbox" '.$checked.' class="custom-control-input" id="'.$variable['id'].'" value="'.$variable['id'].'" name="check">
+                <input type="hidden" name="id" value="'.$variable['id'].'">
+                <input type="hidden" name="check" value="0">
+                <input type="checkbox" '.$checked.' class="custom-control-input" id="'.$variable['id'].'" value="1" name="check">
                 <label class="custom-control-label" for="'.$variable['id'].'">Xác nhận</label>
               </div>
             </td>
+            <td>
+            <input type="submit" class="btn btn-sm btn-secondary" name="capnhat" value="Cập nhật">
+            </td>
             
-            
+           </form> 
           </tr>';
         
          
@@ -95,11 +100,11 @@
           </tbody>
 
         </table>
-        <div class="d-flex justify-content-end">
+        <!-- <div class="d-flex justify-content-end">
           <input type="submit" class="btn btn-sm btn-secondary" name="submit" value="Cập nhật">
-          </div>
+          </div> -->
       </div>
-      </form>
+      
     </main>
   </div>
 </div>

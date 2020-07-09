@@ -9,6 +9,9 @@
   <div class="row">
     <div class="col-12">
       <h1 class="h2 font-weight-normal text-dark mb-3">Giỏ hàng</h1>
+      <!-- <form method="post"> -->
+        <button type="submit" name="hangdamua" class="btn btn-outline-primary m-1" data-toggle="modal" data-target="#exampleModalCenter">Hàng đã mua</button>
+      <!-- </form> -->
     </div>
     <div class="col-12">
       <table class="table">
@@ -126,73 +129,85 @@
       </tbody>
       </table>
       <div class="d-flex flex-row-reverse">
-      <button type="button" class="btn btn-secondary btn-sm mb-4" data-toggle="modal" data-target="#thanhtoan">Thanh Toán</button>
+      <!-- <button type="button" class="btn btn-secondary btn-sm mb-4 open-modal" data-id="<?php echo $_SESSION['id'] ?>" data-toggle="modal" data-target="#thanhtoan">Thanh Toán</button> -->
+      <a href="thanhtoan" class="btn btn-secondary mb-4 open-modal">Thanh toán</a>
       </div>  
     </div>
   </div>
-<div class="modal fade" id="thanhtoan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Đơn Hàng</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form method="post" enctype="multipart/form-data">
-                <div class="form-group">
-                  <label for="recipient-name" class="col-form-label">Họ Và Tên Đệm</label><span class="ml-2 text-danger">* Bắt Buộc</span>
-                  <input type="text" name="hovatendem" class="form-control" id="recipient-name">
-                </div>
-                <div class="form-group">
-                  <label for="recipient-name" class="col-form-label">Tên</label><span class="ml-2 text-danger">* Bắt Buộc</span>
-                  <input type="text" name="hovatendem" class="form-control" id="recipient-name">
-                </div><div class="form-group">
-                  <label for="recipient-name" class="col-form-label">Giá</label>
-                  <p class="text-danger h5">200000 VND</p>
-                </div>
-                <div class="form-group">
-                  <label for="recipient-name" class="col-form-label">Số điện thoại</label><span class="ml-2 text-danger">* Bắt Buộc</span>
-                  <input type="text" name="sdtnhasx" class="form-control" id="recipient-name">
-                </div>
-                <div class="form-group">
-                  <label for="recipient-name" class="col-form-label">Địa chỉ</label><span class="ml-2 text-danger">* Bắt Buộc</span>
-                  <input type="text" name="diachinhasx" class="form-control" id="recipient-name">
-                </div>
-                  <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                  <label class="form-check-label" for="exampleRadios1">
-                    Thanh toán khi nhận hàng
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                  <label class="form-check-label" for="exampleRadios2">
-                    Thanh toán online
-                  </label><div class="form-group">
-                  <label for="recipient-name" class="col-form-label">Số tài khoản ngân hàng</label><span class="ml-2 text-danger">* Bắt Buộc</span>
-                  <input type="text" name="diachinhasx" class="form-control" id="recipient-name">
-                  <div class="form-group">
-                  <label for="recipient-name" class="col-form-label">Tên chủ thẻ</label><span class="ml-2 text-danger">* Bắt Buộc</span>
-                  <input type="text" name="diachinhasx" class="form-control" id="recipient-name">
-                </div>
-                </div>
-                
-               
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Đóng</button>
-              <button type="submit" value="nutthem" name="nutthemnhasx" class="btn btn-success btn-sm">Xác nhận</button>
-            </div>
-                
-                
-                
-              
-            </div>
+
 </div>
 </main>
 
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Hàng đã mua</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="table-responsive">
+          <table class="table table-sm">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">STT</th>
+                    <th scope="col">Tên</th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col">Giá</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php 
+                    
+                    $tong = 0;
+                    $ct_donhang = $this->ct_donhang;
+                    // print_r($ct_donhang); die();
+                    foreach ($this->donhang as $value) {
+                      
+                      echo '<tr><td class="table-success" colspan="4">Đơn hàng có mã ';
+                      echo $value['id'].'. Trạng thái giao hàng: '.$value['trangthaigiaohang'];
+                      echo '</td></tr>';
+                      $stt = 0;
+                      foreach ($ct_donhang[$value['id']] as $key) {
+                        $stt+= 1;
+                        echo '<tr><td>'.$stt.'</td>';
+                        echo '<td>'.$key['tensp'].'</td>';
+                        echo '<td>'.$key['soluong'].'</td>';
+                        echo '<td>'.$key['gia'].'</td></tr>';
+                        
+                        // echo $key['tensp'].'so luong'.$key['soluong'].'gia'.$key['gia'].'<br>';
+                      }
+                      
+                    }
+                      
+              
+             
+                   ?>
+                 
+                </tbody>
+              </table>
+            </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+<!-- <?php print_r($this->donhang); ?> -->
 
 <?php
   include_once 'footer.php';
 ?>
+<script>
+
+$(document).on("click", ".open-modal", function () {
+     var myBookId = $(this).data('id');
+     $(".modal-body #iduser").val( myBookId );
+     // As pointed out in comments, 
+     // it is unnecessary to have to manually call the modal.
+     // $('#addBookDialog').modal('show');
+});
+
+</script>

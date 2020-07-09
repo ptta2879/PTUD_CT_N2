@@ -23,13 +23,13 @@ class trangchu extends Controller {
 		// echo 'SELECT '.$select.',s.id FROM sanpham s JOIN chungloai c on s.idchungloai=c.id WHERE c.trangthai=1  ORDER BY s.gia ASC limit $start_from,8';
 		// die();
 
-		$chungloai = $this->model->loaddulieu("SELECT folder FROM chungloai WHERE trangthai = 1");
+		$chungloai = $this->model->loaddulieu("SELECT id FROM chungloai WHERE trangthai = 1");
 
 		$slide=$this->model->loaddulieu('SELECT * FROM tintuc ORDER BY vitri asc');
 
 		$danhmuc=$this->model->loaddulieu('SELECT n.id,tennhasanxuat,idchungloai FROM nhasanxuat n JOIN chungloai c on n.idchungloai=c.id WHERE c.trangthai=1');
-		$sanphammoi=$this->model->loaddulieu("SELECT s.id,s.idchungloai,s.idnhasx,s.tensp,s.gia,s.soluongban,s.mota FROM sanpham s JOIN chungloai c on s.idchungloai=c.id WHERE c.trangthai=1 ORDER BY s.id DESC ");
-		$sanphambanchay=$this->model->loaddulieu("SELECT s.id,s.idchungloai,s.idnhasx,s.tensp,s.gia,s.soluongban,s.mota FROM sanpham s JOIN chungloai c on s.idchungloai=c.id WHERE c.trangthai=1 ORDER BY s.soluongban DESC");
+		$sanphammoi=$this->model->loaddulieu("SELECT $select,s.id  FROM sanpham s JOIN chungloai c on s.idchungloai=c.id WHERE c.trangthai=1 ORDER BY s.id DESC ");
+		$sanphambanchay=$this->model->loaddulieu("SELECT $select,s.id FROM sanpham s JOIN chungloai c on s.idchungloai=c.id WHERE c.trangthai=1 ORDER BY s.soluongban DESC");
 		if(isset($_REQUEST['hang']))
 		{
 			$hang=$_REQUEST['hang'];

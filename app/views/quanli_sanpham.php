@@ -21,51 +21,42 @@
               <th scope="col">Hình</th>
               <th scope="col">Tên</th>
               <th scope="col">Số lượng</th>
-              <th scope="col">Tổng</th>
+              <th scope="col">Giá</th>
               <th scope="col">Sửa</th>
               <th scope="col">Xóa</th>
             </tr>
           </thead>
+
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>England</td>
-              <td>England</td>
-              <td>England</td>
-              <td>English</td>
-              <td>
-                <a href="#" class="btn btn-sm btn-secondary ">Sửa</a>
-              </td>
-              <td>
-                <a href="#" class="btn btn-sm btn-secondary ">Xóa</a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>France</td>
-              <td>French</td>
-              <td>Paris</td>
-              <td>England</td>
-              <td>
-                <a href="#" class="btn btn-sm btn-secondary ">Sửa</a>
-              </td>
-              <td>
-                <a href="#" class="btn btn-sm btn-secondary ">Xóa</a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Germany</td>
-              <td>German</td>
-              <td>Berlin</td>
-              <td>England</td>
-              <td>
-                <a href="#" class="btn btn-sm btn-secondary ">Sửa</a>
-              </td>
-              <td>
-                <a href="#" class="btn btn-sm btn-secondary ">Xóa</a>
-              </td>
-            </tr>
+            <?php
+              $stt =0;
+              $link = LINK;
+              // print_r($this->soluong);
+              $soluong = $this->soluong;
+              foreach ($this->sanpham as $value) {
+                $stt+=1;
+                $id = $value['idkho'];
+                // print_r($soluong[$id][0]['soluong']);
+                echo '<form method="post">';
+                echo '<input type="hidden" name="idsp" value="'.$value['id'].'">';
+                echo '<tr><th class="align-middle" scope="row">'.$stt.'</th>';
+                echo '<td class="align-middle"><img src="'.$link.$value['id'].'_hinhdaidien_.png" width="70px"></td>';
+                echo '<td class="align-middle">'.$value['tensp'].'</td>';
+                echo '<td class="align-middle">'.$soluong[$id][0]['soluong'].'</td>';
+                echo '<td class="align-middle">'.$value['gia'].'</td>';
+                echo '<td class="align-middle">
+                      <a href="quanlisanpham/suasanpham?idsp='.$value['id'].'" class="btn btn-sm btn-secondary">Sửa</a>
+                    </td>
+                    <td class="align-middle">
+                      <button type="submit" name="xoa" class="btn btn-sm btn-secondary">Xóa</button>
+                    </td>
+                  </tr></form>';
+              }
+
+
+            ?>
+            
+           
           </tbody>
         </table>
     </div>

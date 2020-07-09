@@ -41,64 +41,93 @@ class trangchu_v
 	function sanphammoi()
 	{
 		$dulieu = $this->data["sanphammoi"];
-		$danhmuc = 'dienthoai';
-		for($i=0;$i<count($dulieu);$i++)
-		{
-			$row=$dulieu[$i];
-			echo'
-			<div class="col-lg-3 col-md-6">
-      <a href="chitiet?sanpham='.$row['id'].'">
-			<figure class="figure">
-        <img src="'.DIR_APP.'views/assets/img/sanpham/'.$danhmuc.'/'.$row['tensp'].'_hinhdaidien_'.$row['id'].'.jpg" width="300" height="285" class="figure-img img-fluid hinh" alt="Figure image">
-        <figcaption class="figure-caption">
-          <p class="h6 mb-0 font-weight-bold text-dark text-center">'.$row['tensp'].'</p>
-          <p class="h6 font-weight-normal mb-0 text-danger text-center">'.$row['gia'].' VNĐ</p>
-          
-        </figcaption>
+		$link = LINK;
+		foreach ($dulieu as $value) {
+		$stt = 0;
+		// for($i=0;$i<count($dulieu);$i++)
+		
+			// $row=$dulieu[$i];
+			echo '<div class="col-lg-3 col-md-6">
+      <a href="chitiet?sanpham='.$value['id'].'">
+       <figure class="figure">
+        <img src="'.$link.$value['id'].'_hinhdaidien_.png" width="300" height="285" class="figure-img img-fluid hinh" alt="Figure image">
+        <figcaption class="figure-caption">';
+        foreach ($value as $key => $val) {
+        	$stt +=1;
+        	if($key != 'id') {
+        		if( $stt == 1) {
+        			echo '<p class="h6 font-weight-bold mb-0 text-dark text-center">'.$val.'</p>';
+        		}else {
+        		echo '<p class="h6 font-weight-bold mb-0 text-danger text-center">'.$val.'</p>';
+        	}
+        	}
+        }
+ // <p class="h6 mb-0 font-weight-bold text-dark text-center">'.$va['tensp'].'</p>
+ //          <p class="h6 font-weight-normal mb-0 text-danger text-center">'.$row['gia'].' VNĐ</p>
+        echo'</figcaption>
       </figure>
-       </a>
-    </div>
-';
+      </a>
+    </div>';
 		}
 	}
 
 	function sanphambanchay()
 	{
 		$dulieu = $this->data["sanphambanchay"];
-		$danhmuc = 'dienthoai';
-		for($i=0;$i<count($dulieu);$i++)
-		{
-			$row=$dulieu[$i];
+		$link = LINK;
+		foreach ($dulieu as $value) {
+		$stt = 0;
+		// for($i=0;$i<count($dulieu);$i++)
+		
+			// $row=$dulieu[$i];
 			echo '<div class="col-lg-3 col-md-6">
-      <a href="chitiet?sanpham='.$row['id'].'">
+      <a href="chitiet?sanpham='.$value['id'].'">
        <figure class="figure">
-        <img src="'.DIR_APP.'views/assets/img/sanpham/'.$danhmuc.'/'.$row['tensp'].'_hinhdaidien_'.$row['id'].'.jpg" width="300" height="285" class="figure-img img-fluid hinh" alt="Figure image">
-        <figcaption class="figure-caption">
- <p class="h6 mb-0 font-weight-bold text-dark text-center">'.$row['tensp'].'</p>
-          <p class="h6 font-weight-normal mb-0 text-danger text-center">'.$row['gia'].' VNĐ</p>
-                  </figcaption>
+        <img src="'.$link.$value['id'].'_hinhdaidien_.png" width="300" height="285" class="figure-img img-fluid hinh" alt="Figure image">
+        <figcaption class="figure-caption">';
+        foreach ($value as $key => $val) {
+        	$stt +=1;
+        	if($key != 'id') {
+        		if( $stt == 1) {
+        			echo '<p class="h6 font-weight-bold mb-0 text-dark text-center">'.$val.'</p>';
+        		}else {
+        		echo '<p class="h6 font-weight-bold mb-0 text-danger text-center">'.$val.'</p>';
+        	}
+        	}
+        }
+ // <p class="h6 mb-0 font-weight-bold text-dark text-center">'.$va['tensp'].'</p>
+ //          <p class="h6 font-weight-normal mb-0 text-danger text-center">'.$row['gia'].' VNĐ</p>
+        echo'</figcaption>
       </figure>
       </a>
     </div>';
 		}
 	}
+
 	function tatcasp()
 	{
 		$dulieu = $this->data["tatcasp"];
+
 		// print_r($dulieu); die();
 		$chungloai = $this->data["chungloai"];
-		$link = $chungloai[0]['folder'].'/';
+		$link = LINK;
 		// print_r($this->data["tatcasp"]); die();
 		foreach ($dulieu as $value) {
+			$stt = 0;
 			// print_r($value['id']); die();
 			echo '<div class="col-lg-3 col-md-6">
       <a href="chitiet?sanpham='.$value['id'].'">
        <figure class="figure">
-        <img src="'.$link.$value['tensp'].'_hinhdaidien_'.$value['id'].'.jpg" width="300" height="285" class="figure-img img-fluid hinh" alt="Figure image">
+        <img src="'.$link.$value['id'].'_hinhdaidien_.png" width="300" height="285" class="figure-img img-fluid hinh" alt="Figure image">
         <figcaption class="figure-caption">';
         foreach ($value as $key => $val) {
+        	$stt +=1;
         	if($key != 'id') {
-        		echo '<p class="h6 font-weight-normal mb-0 text-secondary text-center">'.$val.'</p>';
+        		if( $stt == 1) {
+        			echo '<p class="h6 font-weight-bold mb-0 text-dark text-center">'.$val.'</p>';
+        		}else {
+        		echo '<p class="h6 font-weight-bold mb-0 text-danger text-center">'.$val.'</p>';
+        	}
         	}
         }
         echo '

@@ -17,23 +17,24 @@
       <!-- <div class="row d-flex align-items-center"> -->
       <!-- <div class="col-8"> -->
       <form method="post" enctype="multipart/form-data">
+        
         <div class="form-group row d-flex justify-content-center">
           <label for="inputName" class="col-sm-2 col-form-label">Tên sản phẩm</label>
           <div class="col-sm-3">
             <!-- <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com"> -->
-            <input type="text" class="form-control" id="inputEmail" name="tensp">
+            <input type="text" class="form-control" id="inputEmail" name="tensp" required>
           </div>
         </div>
         <div class="form-group row d-flex justify-content-center">
           <label for="inputPassword" class="col-sm-2 col-form-label">Số lượng</label>
           <div class="col-sm-3">
-            <input type="number" class="form-control" id="inputPassword" name="soluong">
+            <input type="number" class="form-control" id="inputPassword" name="soluong" required> 
           </div>
         </div>
         <div class="form-group row d-flex justify-content-center">
           <label for="inputPassword" class="col-sm-2 col-form-label">Giá</label>
           <div class="col-sm-3">
-            <input type="number" class="form-control" id="inputPassword" name="gia">
+            <input type="number" class="form-control" id="inputPassword" name="gia" required>
           </div>
         </div>
         <div class="form-group row d-flex justify-content-center">
@@ -56,13 +57,13 @@
         <div class="form-group row d-flex justify-content-center">
           <label for="hinhdaidien"  class="col-sm-2 col-form-label">Hình đại diện</label>
           <div class="col-sm-3">
-            <input type="file" class="form-control-file" id="hinhdaidien" name="hinhdaidien" multiple>
+            <input type="file" class="form-control-file" id="hinhdaidien" name="hinhdaidien" multiple required>
           </div>
         </div>
          <div class="form-group row d-flex justify-content-center">
           <label for="hinhmota"  class="col-sm-2 col-form-label">Hình mô tả</label>
           <div class="col-sm-3">
-            <input type="file" class="form-control-file" id="hinhmota" name="files[]" multiple>
+            <input type="file" class="form-control-file" id="hinhmota" name="files[]" multiple required>
           </div>
         </div>
 
@@ -71,15 +72,25 @@
          
           foreach ($this->data as $val) {
             // if($val['kieudulieu'] == 'varchar(255)')
+            if($val['tenthuoctinh'] != 'mota'){
             echo '<div class="form-group row d-flex justify-content-center">
           <label for="'.$val['id'].'" class="col-sm-2 col-form-label">'.$val['mota'].'</label>
           <div class="col-sm-3">
             <input type="text" class="form-control" id="'.$val['id'].'" name="'.$val['tenthuoctinh'].'">
           </div>
         </div>';
+            }
           }
 
         ?>
+
+        <div class="form-group row -flex justify-content-center">
+
+            <label for="validationTextarea" class="col-sm-2 col-form-label">Mô tả</label>
+            <div class="col-sm-3">
+              <textarea class="form-control" id="validationTextarea" name="mota" required placeholder="Mô tả sản phẩm"></textarea>
+            </div>
+        </div>
 
         <div class="form-group row">
           
