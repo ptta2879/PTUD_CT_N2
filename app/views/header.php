@@ -84,16 +84,19 @@
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <form>
+    <form method="post">
     <div class="modal-content">
       
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
+          <input type="text" class="form-control" placeholder="Tìm kiếm" name="timkiemnoidung" aria-label="Recipient's username" aria-describedby="button-addon2">
           <div class="input-group-append">
-            <button class="btn btn-secondary" type="button" id="button-addon2">Search</button>
+            <button class="btn btn-secondary" type="submit" name="nuttimkiem" value="timkiem" id="button-addon2">Tìm kiếm</button>
           </div>
         </div>
-      
+      <?php if (isset($_REQUEST['nuttimkiem'])) {
+        $ndtimkiem=$_REQUEST['timkiemnoidung'];
+          echo '<script type="text/javascript">window.location="timkiem?nd='.$ndtimkiem.'"</script>';
+      } ?>
     </div>
     </form>
   </div>

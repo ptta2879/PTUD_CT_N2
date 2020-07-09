@@ -25,7 +25,7 @@ class trangchu extends Controller {
 
 		$chungloai = $this->model->loaddulieu("SELECT id FROM chungloai WHERE trangthai = 1");
 
-		$slide=$this->model->loaddulieu('SELECT * FROM tintuc ORDER BY vitri asc');
+		$slide=$this->model->loaddulieu('SELECT * FROM tintuc WHERE vitri is NOT NULL ORDER BY vitri asc');
 
 		$danhmuc=$this->model->loaddulieu('SELECT n.id,tennhasanxuat,idchungloai FROM nhasanxuat n JOIN chungloai c on n.idchungloai=c.id WHERE c.trangthai=1');
 		$sanphammoi=$this->model->loaddulieu("SELECT $select,s.id  FROM sanpham s JOIN chungloai c on s.idchungloai=c.id WHERE c.trangthai=1 ORDER BY s.id DESC ");
@@ -70,8 +70,7 @@ class trangchu extends Controller {
 			//Tong so trang 
 			$total_records=count($tongsanpham);
 			$total_pages=ceil($total_records/8);
-		$this->view->data = ["chungloai" => $chungloai ,"slide" => $slide, "danhmuc" => $danhmuc, "sanphammoi" => $sanphammoi,"sanphambanchay" => $sanphambanchay,"tatcasp" => 
-			$tatcasp,"totalpages"=>$total_pages,"hang"=>$hang];
+		$this->view->data = ["chungloai" => $chungloai ,"slide" => $slide, "danhmuc" => $danhmuc, "sanphammoi" => $sanphammoi,"sanphambanchay" => $sanphambanchay,"tatcasp" => 	$tatcasp,"totalpages"=>$total_pages,"hang"=>$hang];
 			// print_r($tatcasp); die();
 		// $this->view->data = ["slide" => $slide, "danhmuc" => $danhmuc, "sanphammoi" => $sanphammoi,"sanphambanchay" => $sanphambanchay];
 		$this->view->render('index', 'trangchu_v');

@@ -1,5 +1,11 @@
 <?php
   include_once 'header_admin.php';
+  if($_SESSION['phanquyen']==2)
+  {
+
+    echo'<script type="text/javascript">alert("Bạn không có quyền thực hiện chức năng này");window.location="admin"</script>';
+    
+  }
 ?>
 
 <div class="container-fluid">

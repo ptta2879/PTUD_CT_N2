@@ -10,7 +10,8 @@
     <link href="<?php echo DIR_APP ?>views/assets/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo DIR_APP ?>views/assets/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="<?php echo DIR_APP ?>views/assets/css/style.css">
-
+    <link rel='stylesheet' href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css'>
+<script src='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js'></script>
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -44,15 +45,15 @@
   <div class="sidebar-sticky pt-3">
     <ul class="nav flex-column">
       <li class="nav-item">
-        <a class="nav-link <?php echo $this->active == 'admin'  ? 'active':''  ?>" href="admin.php">
+        <a class="nav-link <?php echo $this->active == 'admin'  ? 'active':''  ?>" href="admin">
           <span><i class="fas fa-home"></i>
           Trang chủ</span>
 
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link <?php echo $this->active == 'quanli_donhang'  ? 'active':''  ?>" href="<?php echo DIR ?>quanlidonhang">
-          <span><i class="fas fa-dolly-flatbed"></i></span>
+     
+      <a class="nav-link <?php echo $this->active == 'quanli_donhang'  ? 'active':''  ?>" href="<?php echo DIR ?>quanlidonhang">
+          <span><i class="fas fa-shopping-basket"></i></i></span>
           Quản lí đơn hàng
         </a>
       </li>
@@ -82,6 +83,7 @@
           Quản lí nhà cung cấp
         </a>
       </li>
+      
       <li class="nav-item">
         <a class="nav-link <?php echo $this->active == 'quanli_thuoctinh'  ? 'active':''  ?>" href="<?php echo DIR ?>quanlithuoctinh">
           <span><i class="fas fa-clipboard-list"></i></span>
