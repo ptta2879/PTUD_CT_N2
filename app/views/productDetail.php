@@ -50,13 +50,7 @@
           <input type="hidden" name="tensp" value="<?php echo $tensp ?>">
           <input type="hidden" name="gia" value="<?php echo $this->data['gia'] ?>">
           <label class=" my-1 mr-2 text-secondary" for="inlineFormCustomSelectPref">Chọn số lượng</label>             
-           <select name="soluong" class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-              <option selected>Chọn</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
-
+           <input type="number" min="1" max="<?php echo $this->data['soluongsp'] ?>"  name="soluong" class="form-control my-1 mr-sm-2" />
           <div>
           <?php foreach ($this->data['thuoctinh'] as $key => $value) {
             if($this->data['mota'][$key] != 'Mô tả'){
