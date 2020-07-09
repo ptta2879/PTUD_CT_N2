@@ -1,6 +1,6 @@
 <?php
   include_once 'header_admin.php';
-  if($_SESSION['phanquyen']==1)
+  if($_SESSION['phanquyen']==2)
   {
 
     echo'<script type="text/javascript">alert("Bạn không có quyền thực hiện chức năng này");window.location="admin"</script>';
@@ -189,7 +189,8 @@
                   for ($i=0 ; $i<=2; $i++) {
                     if($variable['vitri'] == $i) {
                       echo '<option value="'.$variable['vitri'].'" selected>'.$variable['vitri'].'</option>';
-                    } else {
+                    }
+                     else {
                       echo '<option value="'.$i.'" >'.$i.'</option>';
                     }
                   }

@@ -30,7 +30,7 @@
 					$this->model->themxoasua("UPDATE thuoctinh SET trangthai = 1 WHERE id=$id");
 				}
 				else {
-					$this->model->themxoasua("UPDATE thuoctinh SET vitri = 0 WHERE id=$id");
+					$this->model->themxoasua("UPDATE thuoctinh SET vitri = NULL WHERE id=$id");
 					$this->model->themxoasua("UPDATE thuoctinh SET trangthai = 0 WHERE id=$id");
 				}
 
@@ -50,7 +50,7 @@
 
 				}
 				else {
-					$this->model->themxoasua("UPDATE thuoctinhhome SET vitri = 0 WHERE id=$id");
+					$this->model->themxoasua("UPDATE thuoctinhhome SET vitri = NULL WHERE id=$id");
 					$this->model->themxoasua("UPDATE thuoctinhhome SET trangthai = 0 WHERE id=$id");
 				}
 

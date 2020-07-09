@@ -62,7 +62,7 @@
           </div>
                 <div class="form-group">
                   <label for="recipient-name" class="col-form-label">Chủng loại</label><span class="ml-2 text-danger">* Bắt Buộc</span>
-                  <select name="chungloainhasx" class="custom-select" id="inputGroupSelect04">
+                  <select name="chungloainhasx" style="width: 40%" class="custom-select" id="inputGroupSelect04">
                   <?php 
                     $this->page->chungloai();
                   ?>
