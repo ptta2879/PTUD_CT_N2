@@ -21,14 +21,11 @@ class chitiet_v
 		// }
 		if($dulieu > 0){
 			echo '<h3 class="card-text text-success font-weight-bold">Còn Hàng</h3>';
+			
 		}
 		else {
 			echo '<h3 class="card-text text-danger font-weight-bold">Hết Hàng</h3>';
-		}
-		
-			
-		
-		
 
+		}
 	}
 } ?>

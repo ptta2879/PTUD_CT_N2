@@ -91,7 +91,7 @@
 			// print_r(array_merge($sp[0],$data)); die();
 			// print_r($sp[0]["gia"]); die();
 
-			$this->view->data=["idsp" => $idsp,"tensp" => $sp[0]['tensp'], "gia" => $sp[0]['gia'], "chungloai" => $chungloai,"soluongsp" => $soluongsp[0]['soluong'], "thuoctinh" => $thuoctinh, "mota" => $mota];
+			$this->view->data=["idsp" => $idsp,"tensp" => $sp[0]['tensp'], "gia" => $sp[0]['gia'], "chungloai" => $chungloai,"soluongsp" => $soluongsp[0]['soluong'], "thuoctinh" => $thuoctinh, "mota" => $mota,];
 			
 			$this->view->render('productDetail','chitiet_v');
 
