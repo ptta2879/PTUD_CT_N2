@@ -5,8 +5,13 @@
 <div class="container-fluid">
   <div class="row">
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Dashboard</h1>
+      <!-- <div class="d-flex align-items-center"> -->
+        <h1 class="h2 text-center text-secondary mt-5">Chào mừng bạn đến với trang quản trị</h1>
+        <!-- <a class="navbar-brand" href="index.php">
+      <img src="<?php echo DIR_APP ?>views/assets/img/logo/logo.png" style="width: 6em;"  >
+      
+    </a> -->
+        <p class="text-center">Chúc bạn có một ngày tốt lành</p>
         <!-- <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group mr-2">
             <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
@@ -17,11 +22,10 @@
             This week
           </button>
         </div> -->
-      </div>
+      <!-- </div> -->
 
       <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
-
-      <h2>Section title</h2>
+      <!-- <h2>Section title</h2>
       <div class="table-responsive">
         <table class="table table-striped table-sm">
           <thead>
@@ -64,7 +68,7 @@
             </tr>
           </tbody>
         </table>
-      </div>
+      </div> -->
     </main>
   </div>
 </div>

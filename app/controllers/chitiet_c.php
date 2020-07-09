@@ -90,6 +90,7 @@
 			
 			// print_r(array_merge($sp[0],$data)); die();
 			// print_r($sp[0]["gia"]); die();
+			// print_r($soluongsp[0]['soluong']); die();
 
 			$this->view->data=["idsp" => $idsp,"tensp" => $sp[0]['tensp'], "gia" => $sp[0]['gia'], "chungloai" => $chungloai,"soluongsp" => $soluongsp[0]['soluong'], "thuoctinh" => $thuoctinh, "mota" => $mota,];
 			

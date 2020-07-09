@@ -8,6 +8,19 @@
 				$idkh = 0;
 			}
 
+
+
+			if(isset($_REQUEST['xoa'])) {
+				$idgiohang = $_REQUEST['id'];
+				$this->model->themxoasua("DELETE FROM giohang WHERE id = $idgiohang");
+			}
+
+			if(isset($_REQUEST['capnhat'])) {
+				$idgiohang = $_REQUEST['id'];
+				$soluong = $_REQUEST['soluong'];
+				$this->model->themxoasua("UPDATE giohang SET soluong = $soluong WHERE id = $idgiohang");
+			}
+
 			
 
 			$donhang = $this->model->loaddulieu("SELECT d.trangthaigiaohang,d.trangthai,d.ngaylap,d.id FROM donhang d WHERE idkh = $idkh");

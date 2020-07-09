@@ -26,37 +26,37 @@
               <th scope="col">Xóa</th>
             </tr>
           </thead>
+
           <tbody>
+
             <?php 
               $stt = 0;
               $tong = 0;
+              $link = LINK;
               foreach ($this->data as $value) {
                 $stt+=1;
                 $tong += $value['soluong']*$value['gia'];
-
+                 echo '<form method="post">';
+                echo '<input type="hidden" name="id" value="'.$value['id'].'">';
                 echo '<tr><th scope="row">'.$stt.'</th>';
-                echo '<td>English</td>';
+                echo '<td class="align-middle"><img src="'.$link.$value['id'].'_hinhdaidien_.png" width="70px"></td>';
                 echo '<td>'.$value['tensp'].'</td>';
-                echo '<td>
-                      <select class="custom-select" id="inlineFormCustomSelectPref">
-                      <option selected>'.$value['soluong'].'</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      </select>
+                echo '<td style="width: 15%">
+                      <input style="width: 45%" type="number" min="1" max=""  value="'.$value['soluong'].'" name="soluong" class="form-control my-1 mr-sm-2" />
                       </td>';
                 echo '<td>'.$value['soluong']*$value['gia'].'</td>';
                 echo '<td>
-                      <a href="#" class="btn btn-sm btn-secondary ">Cập nhật</a>
+                       <button class="btn btn-sm btn-secondary" type="submit" name="capnhat" >Cập nhật</button>
                     </td>
                     <td>
-                      <a href="#" class="btn btn-sm btn-secondary ">Xóa</a>
+                   
+                      <button class="btn btn-sm btn-secondary" type="submit" name="xoa" >Xóa</button>
                     </td>
-                    </tr>';
+                    </tr></form>';
             }
              ?>
+                <!-- <a href="#" class="btn btn-sm btn-secondary ">Xóa</a> -->
             <!-- <tr>
-
               <th scope="row">1</th>
               <td>England</td>
               <td>English</td>
