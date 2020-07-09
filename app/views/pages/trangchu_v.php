@@ -98,7 +98,7 @@ class trangchu_v
         <figcaption class="figure-caption">';
         foreach ($value as $key => $val) {
         	if($key != 'id') {
-        		echo '<p class="h6 font-weight-normal mb-0 text-secondary text-center">'.$val.'</p>';
+        		echo '<p class="h5 font-weight-normal mb-0 text-secondary text-center">'.$val.'</p>';
         	}
         }
         echo '

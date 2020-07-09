@@ -86,6 +86,22 @@ class database {
 		// print_r($ketqua); die();
 		return $link->lastInsertID();
 	}
+	function themxoasuakhonglastid($sql)
+	{
+		$link = $this->databaseconnect();
+		
+		$ketqua = $link->prepare($sql);
+		// print_r($sql); die();
+		if($ketqua->execute())
+		{
+			return 1;
+		}
+		else
+		{
+			return 0;
+		}
+		// print_r($ketqua); die();
+	}
 	function themxoasualastid($sql) {
 		$link = $this->databaseconnect();
 		

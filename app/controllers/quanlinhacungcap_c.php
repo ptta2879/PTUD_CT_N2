@@ -14,7 +14,7 @@ class quanlinhacungcap extends Controller
 		}
 		else
 		{
-			$selectnhasanxuat=2;
+			$selectnhasanxuat=1;
 		}
 		#dieu kien hien thi
 		switch ($selectnhasanxuat) {

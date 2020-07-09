@@ -1,5 +1,11 @@
 <?php
   include_once 'header_admin.php';
+  if($_SESSION['phanquyen']==2)
+  {
+
+    echo'<script type="text/javascript">alert("Bạn không có quyền thực hiện chức năng này");window.location="admin"</script>';
+    
+  }
 ?>
 
 <div class="container-fluid">
@@ -21,7 +27,6 @@
               <th scope="col">Hình</th>
               <th scope="col">Tên</th>
               <th scope="col">Số lượng</th>
-              <th scope="col">Tổng</th>
               <th scope="col">Sửa</th>
               <th scope="col">Xóa</th>
             </tr>
@@ -31,7 +36,7 @@
               <th scope="row">1</th>
               <td>England</td>
               <td>England</td>
-              <td>England</td>
+              
               <td>English</td>
               <td>
                 <a href="#" class="btn btn-sm btn-secondary ">Sửa</a>
@@ -40,32 +45,7 @@
                 <a href="#" class="btn btn-sm btn-secondary ">Xóa</a>
               </td>
             </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>France</td>
-              <td>French</td>
-              <td>Paris</td>
-              <td>England</td>
-              <td>
-                <a href="#" class="btn btn-sm btn-secondary ">Sửa</a>
-              </td>
-              <td>
-                <a href="#" class="btn btn-sm btn-secondary ">Xóa</a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Germany</td>
-              <td>German</td>
-              <td>Berlin</td>
-              <td>England</td>
-              <td>
-                <a href="#" class="btn btn-sm btn-secondary ">Sửa</a>
-              </td>
-              <td>
-                <a href="#" class="btn btn-sm btn-secondary ">Xóa</a>
-              </td>
-            </tr>
+            
           </tbody>
         </table>
     </div>

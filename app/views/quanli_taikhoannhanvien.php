@@ -1,5 +1,11 @@
 <?php
   include_once 'header_admin.php';
+  if($_SESSION['phanquyen']==1)
+  {
+
+    echo'<script type="text/javascript">alert("Bạn không có quyền thực hiện chức năng này");window.location="admin"</script>';
+    
+  }
 ?>
 
 <div class="container-fluid">
@@ -23,17 +29,18 @@
               </button>
             </div> -->
             <div class="modal-body">
-              <form>
+              <form method="post">
                 <div class="form-group">
                   <label for="recipient-name" class="col-form-label">Username</label>
-                  <input type="text" class="form-control" id="recipient-name">
+                  <input type="email" name="username" class="form-control" id="recipient-name">
                 </div>
               
-              </form>
+              
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success btn-sm">Xác nhận</button>
+              <button type="submit" class="btn btn-success btn-sm" name="themtaikhoan">Xác nhận</button>
+              </form>
             </div>
           </div>
         </div>
@@ -42,50 +49,25 @@
       <!-- <div>
         <a href="#" class="btn btn-sm btn-secondary ">Thêm</a>
       </div> -->
-    
+    <?php if (isset($this->message)){echo $this->message;} {
+      # code...
+    } ?>
       <div class="table-responsive">
         <table class="table table-striped table-sm ">
           <thead>
             <tr >
               <th scope="col">STT</th>
+              <th scope="col">Username</th>
+              <th scope="col">Họ và tên đệm</th>
               <th scope="col">Tên</th>
               <th scope="col">SDT</th>
+              <th scope="col">Địa chỉ</th>
               <th scope="col">Xóa</th>
             </tr>
           </thead>
           <tbody >
-            <tr>
-              <th scope="row">1</th>
-              <td class="align-self-center">England</td>
-              <td>English</td>
-              <td>
-                <a href="#" class="btn btn-sm btn-secondary ">Xóa</a>
-              </td>
-            </tr>
-             <tr>
-              <th scope="row">2</th>
-              <td class="align-self-center">England</td>
-              <td>English</td>
-              <td>
-                <a href="#" class="btn btn-sm btn-secondary ">Xóa</a>
-              </td>
-            </tr>
-             <tr>
-              <th scope="row">3</th>
-              <td class="align-self-center">England</td>
-              <td>English</td>
-              <td>
-                <a href="#" class="btn btn-sm btn-secondary ">Xóa</a>
-              </td>
-            </tr>
-             <tr>
-              <th scope="row">4</th>
-              <td class="align-self-center">England</td>
-              <td>English</td>
-              <td>
-                <a href="#" class="btn btn-sm btn-secondary ">Xóa</a>
-              </td>
-            </tr>
+            <?php $this->page->taikhoan(); ?>
+            
             
           </tbody>
         </table>
