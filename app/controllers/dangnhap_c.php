@@ -29,7 +29,9 @@ class dangnhap extends Controller
 					$diachi = $row['diachi'];
 
 					//session//
-					$_SESSION['id']=$id;
+
+					$_SESSION['id'] = $id;
+
 					$_SESSION['username']=$username;
 					$_SESSION['password']=$password;
 					$_SESSION['hotendem']=$hotendem;

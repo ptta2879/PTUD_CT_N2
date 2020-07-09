@@ -46,41 +46,47 @@
       <?php $this->page->soluong();?>
      <!--  <div class="row">
         <div class="col-12 mb-3"> -->
-          <form class="form-inline mb-3">
+          <form class="form-inline mb-3" method="post">
+          <input type="hidden" name="tensp" value="<?php echo $tensp ?>">
+          <input type="hidden" name="gia" value="<?php echo $this->data['gia'] ?>">
           <label class=" my-1 mr-2 text-secondary" for="inlineFormCustomSelectPref">Chọn số lượng</label>             
-           <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+           <select name="soluong" class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
               <option selected>Chọn</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
             </select>
 
-          </form>
+          <div>
           <?php foreach ($this->data['thuoctinh'] as $key => $value) {
               echo '<span class="text-secondary">'.$this->data['mota'][$key].'</span>';
               echo '<span class="ml-4 font-weight-bold text-secondary">'.$value.'</span><br>';
           }
 
           ?>
+          </div>
        <!-- </div>
       </div> -->
         <div class="xuong">
         <?php if(isset($_SESSION['username'])&&isset($_SESSION['password'])&&isset($_SESSION['phanquyen'])&&isset($_SESSION['hotendem'])&&isset($_SESSION['ten'])&&isset($_SESSION['sdt'])&&isset($_SESSION['diachi']))
     {
-      echo '<a href="#" class="btn btn-outline-danger btn btn-block ">Mua ngay</a>
+      echo '<a href="#" class="btn btn-outline-danger btn-block ">Mua ngay</a>
 
-          <a href="#" class="btn btn-outline-primary btn btn-block ">Thêm vào giỏ hàng</a>
+              <button type="submit" class="btn btn-outline-primary btn-block" name="themvaogio">Thêm vào giỏ</button>
+          
+
          ';
     }
     else{
-      echo '<a href="dangnhap" class="btn btn-outline-warning btn btn-block ">Đăng nhập để mua hàng</a>';
+      echo '<a href="dangnhap" class="btn btn-outline-warning btn-block ">Đăng nhập để mua hàng</a>';
     }
      ?> 
         </div>
+        </form>
       </div>
     </div>
 
-    
+  <!-- <a href="giohang.html" class="btn btn-outline-primary btn-block ">Thêm vào giỏ hàng</a> -->
     <!-- <div class="col-2"></div> -->
     <!-- </div> -->
 
