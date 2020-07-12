@@ -1,7 +1,14 @@
 <?php
  include_once 'header.php';
+
+
+// print_r($this->data); die();
+ if(empty($this->data)) {
+ 	echo '<script type="text/javascript">window.location="giohang"</script>';
+ }
 ?>
- 
+
+
 <main>
 	<div class="container sessionrieng">
 		<h1 class="h1 text-secondary">Thanh toán</h1>

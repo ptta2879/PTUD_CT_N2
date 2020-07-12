@@ -139,7 +139,7 @@
 			$data = $this->model->loaddulieu("SELECT * FROM giohang WHERE idkh = $idkh");
 			
 
-			$this->view->data = $data;
+			// $this->view->data = $data;
 			
 
 			$giohang = $this->model->loaddulieu("SELECT tensp,soluong,gia FROM giohang WHERE idkh = $idkh");
@@ -178,7 +178,7 @@
 				$trangthaigiaohang = 'Chưa giao';
 
 				// echo "INSERT INTO donhang(idkh,hovatendem,ten,diachi,gia,sdt,ngaylap,loaithanhtoan,trangthai,trangthaigiaohang) VALUES($idkh,'$hotendem','$ten','$diachi',$gia,$sdt,$ngaylap,'$loaithanhtoan',$trangthai,$trangthaigiaohang)"; die();
-				$id_insert = $this->model->themxoasua("INSERT INTO donhang(idkh,hovatendem,ten,diachi,gia,sdt,ngaylap,loaithanhtoan,trangthai,trangthaigiaohang) VALUES($idkh,'$hotendem','$ten','$diachi',$gia,$sdt,$ngaylap,'$loaithanhtoan',$trangthai,$trangthaigiaohang)");
+				$id_insert = $this->model->themxoasua("INSERT INTO donhang(idkh,hovatendem,ten,diachi,gia,sdt,ngaylap,loaithanhtoan,trangthai,trangthaigiaohang) VALUES($idkh,'$hotendem','$ten','$diachi',$gia,$sdt,$ngaylap,'$loaithanhtoan',$trangthai,'$trangthaigiaohang')");
 					if($id_insert > 0) {
 						$this->id_insert = $id_insert;
 						$giohang = $this->model->loaddulieu("SELECT * FROM giohang WHERE idkh=$idkh");
@@ -205,6 +205,11 @@
 					$this->thanhtoan_online($id_insert);
 					
 				}
+				elseif($loaithanhtoan == 'offline'){
+					// echo "DELETE FROM giohang WHERE idkh = $idkh"; die();
+					$this->model->themxoasua("DELETE FROM giohang WHERE idkh = $idkh");
+					
+				}
 				
 			}
 
@@ -215,6 +220,12 @@
 					$this->view->message = $this->vnpay_return();
 					// print_r($this->view->message); die();
 			}
+
+
+			$data = $this->model->loaddulieu("SELECT * FROM giohang WHERE idkh = $idkh");
+			
+
+			$this->view->data = $data;
 
 		$this->view->render('thanhtoan');
 			
