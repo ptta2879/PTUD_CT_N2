@@ -35,7 +35,7 @@ class quanlibaiviet_v
               <a href="suabaiviet?baiviet='.$row['id'].'" class="btn btn-sm btn-secondary ">Sửa</a>
             </td>
             <td>
-              <a href="?xoa='.$row['id'].'" class="btn btn-sm btn-secondary ">Xóa</a>
+              <a href="?xoa='.$row['id'].'" onclick="return confirm(\'Bạn muốn xóa bài viết này\');" class="btn btn-sm btn-secondary ">Xóa</a>
             </td>
           </tr>';
           $stt++;

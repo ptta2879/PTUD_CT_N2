@@ -28,11 +28,9 @@ class thembaiviet extends Controller
 						if ($thongbaotintuc!=0) 
 						{
 							$thongbaohinhtintuc=move_uploaded_file($tmp_nametintuc,"./app/views/assets/img/tintuc/Tintuc".$thongbaotintuc.".png");
-							if($thongbaohinhtintuc==1)
-							{
 								echo'<script type="text/javascript">alert("Thêm bài viết mới thành công")</script>';
 							echo '<META http-equiv="refresh" content="0;URL=quanlibaiviet" charset="utf8">';
-							}
+
 						}
 						else
 						{

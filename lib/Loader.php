@@ -8,7 +8,7 @@ class Loader {
 
 
 	function __construct() {
-		session_start();
+		
 		$url = $this->UrlProcess();
 		// print_r($url);
 
