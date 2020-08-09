@@ -13,7 +13,7 @@
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Quản lí thuộc tính</h1>
-        <?php if(isset($this->message)) { echo $this->message; }?>
+       
         <!-- <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group mr-2">
             <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
@@ -73,6 +73,7 @@
       
         <table class="table table-sm table-hover">
           <h1 class="h4">Quản lí thuộc tính trang chi tiết</h1>
+           <?php if(isset($this->message)) { echo $this->message; }?>
           <thead>
             <tr class="table-secondary">
               <th scope="col">STT</th>
@@ -153,10 +154,11 @@
 
       
       
-      <div class="table-responsive">
+      <div class="table-responsive mb-5">
       
         <table class="table table-hover table-sm ">
           <h1 class="h4">Quản lí thuộc tính trang chủ</h1>
+          <?php if(isset($this->messagehome)) { echo $this->messagehome; }?>
           <thead>
             <tr class="table-secondary">
               <th scope="col">STT</th>

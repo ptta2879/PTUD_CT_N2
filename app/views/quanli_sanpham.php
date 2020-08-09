@@ -13,9 +13,9 @@
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Quản lí sản phẩm</h1>
-       
+        <?php if(isset($this->message)) {echo $this->message;}  ?>
       </div>
-
+      
       <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
       <a class="btn btn-secondary btn-sm mb-4 " href="quanlisanpham/themsanpham" role="button">Thêm sản phẩm mới</a>
       <!-- <h2>Section title</h2> -->
@@ -54,7 +54,8 @@
                       <a href="quanlisanpham/suasanpham?idsp='.$value['id'].'" class="btn btn-sm btn-secondary">Sửa</a>
                     </td>
                     <td class="align-middle">
-                      <button type="submit" name="xoa" class="btn btn-sm btn-secondary">Xóa</button>
+                       <a class="btn btn-sm btn-secondary" href="?xoa='.$value['id'].'" onclick="return confirm(\'Bạn chắc chắn muốn xóa sản phẩm này\');">Xóa</a>
+                      
                     </td>
                   </tr></form>';
               }

@@ -9,16 +9,28 @@
 			}
 
 
-
-			if(isset($_REQUEST['xoa'])) {
-				$idgiohang = $_REQUEST['id'];
+			// print($_GET['xoa']); die();
+			if(isset($_GET['xoa'])) {
+				$idgiohang = $_GET['xoa'];
+				$tensp = $this->model->loaddulieu("SELECT tensp FROM giohang WHERE id = $idgiohang");
 				$this->model->themxoasua("DELETE FROM giohang WHERE id = $idgiohang");
+				
+				if(isset($tensp)) {
+				$tensp = $tensp[0]['tensp'];
+				$this->view->message = '<div class="alert alert-warning" role="alert">Đã xóa sản phẩm '.$tensp.' </div>';
+				}
 			}
 
 			if(isset($_REQUEST['capnhat'])) {
 				$idgiohang = $_REQUEST['id'];
 				$soluong = $_REQUEST['soluong'];
 				$this->model->themxoasua("UPDATE giohang SET soluong = $soluong WHERE id = $idgiohang");
+				$tensp = $this->model->loaddulieu("SELECT tensp FROM giohang WHERE id = $idgiohang");
+
+				if(isset($tensp)) {
+				$tensp = $tensp[0]['tensp'];
+				$this->view->message = '<div class="alert alert-success" role="alert">Đã cập nhật sản phẩm '.$tensp.' thành công</div>';
+				}
 			}
 
 			

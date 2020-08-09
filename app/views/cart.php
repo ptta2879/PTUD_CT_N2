@@ -12,6 +12,7 @@
       <!-- <form method="post"> -->
         <button type="submit" name="hangdamua" class="btn btn-outline-primary m-1" data-toggle="modal" data-target="#exampleModalCenter">Hàng đã mua</button>
       <!-- </form> -->
+      <p class="mr-auto"><?php if(isset($this->message)) { echo $this->message;} ?></p>
     </div>
     <div class="col-12">
       <table class="table">
@@ -39,7 +40,7 @@
                  echo '<form method="post">';
                 echo '<input type="hidden" name="id" value="'.$value['id'].'">';
                 echo '<tr><th scope="row">'.$stt.'</th>';
-                echo '<td class="align-middle"><img src="'.$link.$value['id'].'_hinhdaidien_.png" width="70px"></td>';
+                echo '<td class="align-middle"><img src="'.$link.$value['idsp'].'_hinhdaidien_.png" width="70px"></td>';
                 echo '<td>'.$value['tensp'].'</td>';
                 echo '<td style="width: 15%">
                       <input style="width: 45%" type="number" min="1" max=""  value="'.$value['soluong'].'" name="soluong" class="form-control my-1 mr-sm-2" />
@@ -50,11 +51,13 @@
                     </td>
                     <td>
                    
-                      <button class="btn btn-sm btn-secondary" type="submit" name="xoa" >Xóa</button>
+                      
+                      <a class="btn btn-sm btn-secondary" href="?xoa='.$value['id'].'" onclick="return confirm(\'Bạn chắc chắn muốn xóa sản phẩm này\');">Xóa</a>
                     </td>
                     </tr></form>';
             }
              ?>
+             <!-- <button class="btn btn-sm btn-secondary" type="submit" name="xoa" >Xóa</button> -->
                 <!-- <a href="#" class="btn btn-sm btn-secondary ">Xóa</a> -->
             <!-- <tr>
               <th scope="row">1</th>

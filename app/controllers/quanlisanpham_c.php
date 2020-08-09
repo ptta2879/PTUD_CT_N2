@@ -9,14 +9,23 @@
 			
 
 
-			if(isset($_REQUEST['xoa'])) {
-				$idsp = $_REQUEST['idsp'];
+			if(isset($_GET['xoa'])) {
+				$idsp = $_GET['xoa'];
 				// print_r($idsp); die();
-				// $tensanpham = $this->model->loaddulieu("SELECT tensp FROM sanpham WHERE id = $idsp");
+				$tensanpham = $this->model->loaddulieu("SELECT tensp FROM sanpham WHERE id = $idsp");
 				// print_r($tensanpham); die();
-				// $tensp = $tensanpham[0]['tensp'];
+				$tensp = $tensanpham[0]['tensp'];
+				$idkho = $this->model->loaddulieu("SELECT idkho FROM sanpham WHERE id = $idsp");
+				$idkho = $idkho[0]['idkho'];
+				// print_r("DELETE * FROM khohang WHERE id= $idkho"); die();
+				$this->model->themxoasua("DELETE FROM khohang WHERE id= $idkho");
 				$this->model->themxoasua("DELETE FROM sanpham WHERE id = $idsp");
-				// $this->view->message = '<div class="alert alert-success" role="alert">Đã xóa sản phẩm '.$tensp.' </div>';
+				$targetDir = '.'.LINK;
+				unlink($targetDir.$idsp.'_hinhdaidien_.png');
+				unlink($targetDir.$idsp.'_1_mota_.png');
+				// unlink($targetDir.$idsp.'_1_mota_.png');
+				$this->view->message = '<div class="alert alert-warning" role="alert">Đã xóa sản phẩm '.$tensp.' </div>';
+				// echo 'ádsadaasdsa'; die();
 			}
 
 
@@ -63,21 +72,23 @@
 
 				
 				// $targetDir = $chungloai[0]['folder']."/";
-				$targetDir = LINK;
+				$targetDir = '.'.LINK;
 				// $allowTypes = array('jpg','png','jpeg');
-				$allowTypes = array('png');
+				$allowTypes = array('png','jpg','jpeg');
 				$stt = 0;
 				$success = 0;
 				// $idsp = 1;
 				$tensp = $_REQUEST['tensp'];
 
 				// print_r($_FILES); die();
-				if(!empty($_FILES['hinhdaidien']['name']) && $idsp > 0) {
+				$fileName = $_FILES['hinhdaidien']['name'];
+				if($idsp > 0 && isset($fileName)) {
 					$fileName = $_FILES['hinhdaidien']['name'];
 		            $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
-		            $name = $idsp.'_hinhdaidien_.'.$fileType;
+		            $name = $idsp.'_hinhdaidien_.png';
 
 		            $targetFilePath = $targetDir . $name; 
+
 			 		// print_r($targetFilePath); die();
 		            if(in_array($fileType, $allowTypes)){ 
 		                if(move_uploaded_file($_FILES["hinhdaidien"]["tmp_name"], $targetFilePath)) {
@@ -88,28 +99,30 @@
 
 			    $fileNames = array_filter($_FILES['files']['name']);
 			    // print_r($fileNames); die();
-			    if(!empty($fileNames) && $idsp > 0){ 
+			    if($idsp > 0 && isset($fileNames)){ 
 			        foreach($_FILES['files']['name'] as $key=>$val){ 
 
 			        	$stt+=1;
 			            // $fileName = basename($_FILES['files']['name'][$key]);
 			            $fileName = $_FILES['files']['name'][$key];
 			            $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
-			            $name = $idsp.'_'.$stt.'_mota_.'.$fileType;
+			            $name = $idsp.'_'.$stt.'_mota_.png';
 
 			            // $targetFilePath = $targetDir . $fileName; 
 			            $targetFilePath1 = $targetDir . $name; 
-			          
+			          	// print($targetFilePath1); die();
 			            if(in_array($fileType, $allowTypes)){ 
 			                // Upload file to server 
+
 			                if(move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetFilePath1)){ 
 			                	$success+=1;
 			                	// print_r($success); die();
-			            }
-			        }
+			            	}
+			        	}
 			        }
 				}
-				if($success == 2){ 
+				if($success >= 2){ 
+					// echo 'them oxndfd'; die();
 					$this->view->message =  '<div class="alert alert-success" role="alert">Thêm sản phẩm '.$tensp.' thành công</div>';
 				}
 				// die();
@@ -181,9 +194,9 @@
 
 				
 				// $targetDir = $chungloai[0]['folder']."/";
-				$targetDir = LINK;
+				$targetDir = '.'.LINK;
 				// $allowTypes = array('jpg','png','jpeg');
-				$allowTypes = array('png');
+				$allowTypes = array('png','jpg','jpeg');
 				$stt = 0;
 				$success = 0;
 				// $idsp = 1;
@@ -193,13 +206,15 @@
 				if(!empty($_FILES['hinhdaidien']['name']) && $idsp > 0) {
 					$fileName = $_FILES['hinhdaidien']['name'];
 		            $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
-		            $name = $idsp.'_hinhdaidien_.'.$fileType;
+		            $name = $idsp.'_hinhdaidien_.png';
 
 		            $targetFilePath = $targetDir . $name; 
 			 		// print_r($targetFilePath); die();
-		            if(in_array($fileType, $allowTypes)){ 
+		            if(in_array($fileType, $allowTypes)){
+		            	unlink($targetFilePath);
 		                if(move_uploaded_file($_FILES["hinhdaidien"]["tmp_name"], $targetFilePath)) {
 		                	$success+=1;
+		                	// print_r($targetFilePath); die();
 		            	}
 		        	}
 				}
@@ -213,7 +228,7 @@
 			            // $fileName = basename($_FILES['files']['name'][$key]);
 			            $fileName = $_FILES['files']['name'][$key];
 			            $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
-			            $name = $idsp.'_'.$stt.'_mota_.'.$fileType;
+			            $name = $idsp.'_'.$stt.'_mota_.png';
 
 			            // $targetFilePath = $targetDir . $fileName; 
 			            $targetFilePath1 = $targetDir . $name; 
