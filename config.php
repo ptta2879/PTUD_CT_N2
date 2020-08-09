@@ -14,8 +14,8 @@ define("LINK", '/app/views/assets/img/sanpham/');
 
 // Định nghĩa thông số Database
 	define('DB_HOST', 'localhost');
-	define('DB_USER','vuive');
-	define('DB_PASS','123456');
-	define('DB_NAME','db_vuive');
+	define('DB_USER','root');
+	define('DB_PASS','');
+	define('DB_NAME','id14304192_fac');
 
 ?> 

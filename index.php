@@ -1,4 +1,5 @@
 <?php
+session_start();
 	require_once 'config.php';
 	require_once 'lib/Loader.php';
 	require_once 'lib/Controller.php';

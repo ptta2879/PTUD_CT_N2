@@ -13,7 +13,6 @@ class quanlibaiviet extends Controller
 			$thongbao=$this->model->themxoasuakhonglastid("DELETE FROM baiviet where id=$id limit 1");
 			if ($thongbao!=0) {
 				unlink("./app/views/assets/img/baiviet/baiviet-".$id.".jpg");
-				
 				echo'<script type="text/javascript">alert("Xóa bài viết mới thành công")</script>';
 					echo '<META http-equiv="refresh" content="0;URL=quanlibaiviet" charset="utf8">';
 			}
@@ -41,7 +40,7 @@ class quanlibaiviet extends Controller
 					if(isset($tmp_nametintuc)){
 						move_uploaded_file($tmp_nametintuc,"./app/views/assets/img/tintuc/Tintuc".$idtintuc.".png");
 					}
-					echo'<script type="text/javascript">swal("Thay đổi vị trí thành công")</script>';
+					echo'<script type="text/javascript">alert("Thay đổi vị trí thành công")</script>';
 					echo '<META http-equiv="refresh" content="0;URL=quanlibaiviet?selectbaiviet=2" charset="utf8">';
 				}
 				else

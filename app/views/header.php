@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +48,13 @@
           <li class="nav-item">
             <a href="admin" class="nav-link">Trang Quản Lý</a>
           </li>';
-          } ?>
+          }
+          elseif (isset($_SESSION['username'])&&isset($_SESSION['password'])&&isset($_SESSION['phanquyen'])&&isset($_SESSION['hotendem'])&&isset($_SESSION['ten'])&&isset($_SESSION['sdt'])&&isset($_SESSION['diachi'])&&$_SESSION['phanquyen']==2) {
+             echo '</li>
+          <li class="nav-item">
+            <a href="admin" class="nav-link">Trang Quản Lý</a>
+          </li>';
+           } ?>
          
 
         </ul>

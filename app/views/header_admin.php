@@ -50,58 +50,13 @@
           Trang chủ</span>
 
         </a>
-      </li>
-     
-      <a class="nav-link <?php echo $this->active == 'quanli_donhang'  ? 'active':''  ?>" href="<?php echo DIR ?>quanlidonhang">
-          <span><i class="fas fa-shopping-basket"></i></i></span>
-          Quản lí đơn hàng
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link <?php echo $this->active == 'quanli_sanpham'  ? 'active':''  ?>" href="<?php echo DIR ?>quanlisanpham">
-          <span><i class="fas fa-boxes"></i></span>
-          Quản lí sản phẩm
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link <?php echo $this->active == 'quanli_baiviet'  ? 'active':''  ?>" href="<?php echo DIR ?>quanlibaiviet">
-          <span><i class="fas fa-edit"></i></span>
-          Quản lí bài viết
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link <?php echo $this->active == 'quanli_hangtonkho'  ? 'active':''  ?>" href="<?php echo DIR ?>quanlihangtonkho" >
-          <span><i class="fas fa-warehouse"></i></span>
-          Quản lí hàng tồn kho
-         
-        </a>
+      <?php if($_SESSION['phanquyen']==1){
+        include_once('header_admin_nvbh.php');
+      }
+      elseif ($_SESSION['phanquyen']==2) {
+         include_once('header_admin_admin.php');
+       } ?>
       
-      </li>
-      <li class="nav-item">
-        <a class="nav-link <?php echo $this->active == 'quanli_nhacungcap'  ? 'active':''  ?>" href="<?php echo DIR ?>quanlinhacungcap">
-          <span><i class="fas fa-exchange-alt"></i></span>
-          Quản lí nhà cung cấp
-        </a>
-      </li>
-      
-      <li class="nav-item">
-        <a class="nav-link <?php echo $this->active == 'quanli_thuoctinh'  ? 'active':''  ?>" href="<?php echo DIR ?>quanlithuoctinh">
-          <span><i class="fas fa-clipboard-list"></i></span>
-          Quản lí thuộc tính
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link <?php echo $this->active == 'quanli_taikhoannhanvien'  ? 'active':''  ?>" href="<?php echo DIR ?>quanlitaikhoannhanvien">
-          <span><i class="fas fa-user-friends"></i></span>
-          Quản lí tài khoản nhân viên
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link <?php echo $this->active == 'quanli_chungloai'  ? 'active':''  ?>" href="<?php echo DIR ?>quanlichungloai">
-          <span><i class="fas fa-layer-group"></i></span>
-          Quản lí chủng loại
-        </a>
-      </li>
     </ul>
 
   </div>
